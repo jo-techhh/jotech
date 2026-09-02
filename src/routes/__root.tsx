@@ -19,7 +19,11 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'JoTech — Modern Engineering & Digital Solutions',
+      },
+      {
+        name: 'description',
+        content: 'JoTech delivers high-impact software engineering, cloud infrastructure, AI automation, and modern web applications for ambitious teams.',
       },
     ],
     links: [
