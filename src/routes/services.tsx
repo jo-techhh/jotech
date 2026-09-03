@@ -9,7 +9,7 @@ export const Route = createFileRoute('/services')({
       {
         name: 'description',
         content:
-          'Explore JoTech engineering capabilities: Full-Stack React & Node Applications, Cloud Infrastructure & DevOps, AI Automation Workflows, and System Advisory.',
+          'Explore JoTech engineering capabilities: Python, Node.js, Golang, Angular, React, AI Solutions (MCP & ChatBots), and Cloud Deployment in AWS, Google Cloud, and Contabo.',
       },
     ],
   }),
@@ -20,59 +20,134 @@ function ServicesPage() {
   const services = [
     {
       id: 'web',
-      icon: '🚀',
-      title: 'Full-Stack Application Development',
+      icon: '⚡',
+      title: 'Full-Stack & Backend Engineering',
       badge: 'Core Competency',
-      tagline: 'High-performance web apps built with modern React, TypeScript, and SSR.',
+      tagline: 'High-performance web and backend architectures built across Python, Node.js, Golang, Angular, and React.',
       features: [
-        'Responsive, accessible, and fast web applications using React 19 and TanStack Router',
-        'State-of-the-art server-side rendering (SSR) for instant time-to-interactive and strong SEO',
-        'Custom interactive dashboards, administrative portals, and client-facing web tools',
-        'Type-safe end-to-end APIs with rigorous validation and testing',
+        'Robust backend services and REST/GraphQL APIs engineered with Python (Django, FastAPI, Flask, and custom Python frameworks)',
+        'Scalable Node.js & TypeScript microservices built with Express, NestJS, and ultra-fast ElysiaJS',
+        'High-concurrency, low-latency compiled backends engineered with Golang and Gin',
+        'Dynamic, responsive single-page applications and interactive portals crafted in Angular and React',
+        'Type-safe end-to-end client-server contracts with rigorous validation, testing, and caching',
       ],
-      technologies: ['React 19', 'TypeScript', 'TanStack Start', 'Tailwind CSS', 'Node.js', 'PostgreSQL'],
-    },
-    {
-      id: 'cloud',
-      icon: '☁️',
-      title: 'Cloud Infrastructure & DevOps',
-      badge: 'High Reliability',
-      tagline: 'Automated, resilient cloud platforms engineered for zero downtime.',
-      features: [
-        'Infrastructure as Code (IaC) with automated provisioning and reproducible environments',
-        'Continuous Integration & Continuous Deployment (CI/CD) pipelines',
-        'Edge computing and serverless architectures with near-zero latency globally',
-        'Containerization and microservices orchestration with Docker and modern orchestrators',
+      technologies: [
+        'Python (Django / FastAPI / Flask)',
+        'Node.js (NestJS / Express / ElysiaJS)',
+        'Golang (Gin)',
+        'Angular',
+        'React',
+        'TypeScript',
+        'PostgreSQL / Redis',
       ],
-      technologies: ['AWS', 'Cloudflare Workers', 'Docker', 'GitHub Actions', 'Terraform', 'Vercel / Nitro'],
     },
     {
       id: 'ai',
       icon: '🤖',
-      title: 'AI Solutions & Workflow Automation',
-      badge: 'Cutting Edge',
-      tagline: 'Intelligent automation and generative AI integration tailored to your operations.',
+      title: 'AI Solutions, MCP & Intelligent Applications',
+      badge: 'Next-Gen AI',
+      tagline: 'Model Context Protocol (MCP) integrations, conversational chatbots, and custom AI-powered applications.',
       features: [
-        'Autonomous agentic workflows that remove repetitive engineering and business tasks',
-        'Retrieval-Augmented Generation (RAG) and semantic knowledge base search for internal data',
-        'Custom LLM fine-tuning, prompt engineering, and guardrail validation',
-        'Seamless integration with third-party tools, ERPs, CRMs, and messaging systems',
+        'Custom Model Context Protocol (MCP) server & client architectures connecting LLMs directly to your business data and tools',
+        'Intelligent conversational AI & ChatBots engineered for customer interaction, support, and internal workflow co-pilots',
+        'Production-ready AI-powered applications featuring semantic search, vector embeddings, and Retrieval-Augmented Generation (RAG)',
+        'Autonomous agent toolchains, prompt engineering, validation guardrails, and enterprise LLM integrations',
       ],
-      technologies: ['LLM APIs', 'Vector Embeddings', 'Python', 'FastAPI', 'TanStack Intent'],
+      technologies: [
+        'MCP (Model Context Protocol)',
+        'AI ChatBots & Copilots',
+        'AI-Powered Applications',
+        'Python & FastAPI',
+        'Vector Databases & RAG',
+        'Autonomous Agents',
+      ],
+    },
+    {
+      id: 'cloud',
+      icon: '☁️',
+      title: 'Cloud Infrastructure & Deployment Solutions',
+      badge: 'Zero-Downtime Reliability',
+      tagline: 'Resilient production deployments and infrastructure across AWS, Google Cloud, and Contabo VPS.',
+      features: [
+        'Amazon Web Services (AWS) deployment: EC2, ECS, Lambda serverless, S3, RDS, and CloudFront CDN',
+        'Google Cloud (GCloud) infrastructure setup: Cloud Run, Compute Engine, GKE Kubernetes, and IAM security',
+        'Cost-effective, high-performance VPS hosting, bare-metal server setup, and clustering on Contabo VPS',
+        'Automated CI/CD deployment pipelines with Docker containerization, Nginx reverse proxy, and zero-downtime rollouts',
+      ],
+      technologies: [
+        'AWS (Amazon Web Services)',
+        'Google Cloud (GCloud)',
+        'Contabo VPS',
+        'Docker & Containers',
+        'CI/CD Pipelines',
+        'Nginx & Cloudflare',
+      ],
     },
     {
       id: 'advisory',
       icon: '🛡️',
       title: 'Architecture Advisory & Code Audits',
       badge: 'Strategic Value',
-      tagline: 'Objective technical audits, performance tuning, and technical roadmapping.',
+      tagline: 'Objective technical audits, performance tuning, and technical roadmapping for scalable systems.',
       features: [
         'Comprehensive codebase reviews for performance bottlenecks, security flaws, and tech debt',
-        'Database optimization, query indexing, and schema design for heavy workloads',
-        'Modernization strategies for legacy codebases transitioning to modern frameworks',
-        'Engineering team coaching on clean code, automated testing, and CI best practices',
+        'Database optimization, query indexing, and schema design for heavy production workloads',
+        'Modernization strategies for legacy codebases transitioning to modern Python, Node, Go, or Angular/React stacks',
+        'Engineering team coaching on clean architecture, automated testing, and CI/CD best practices',
       ],
-      technologies: ['Architecture Audits', 'Database Tuning', 'Security Hardening', 'Refactoring Plans'],
+      technologies: [
+        'System Architecture',
+        'Database Optimization',
+        'Security Hardening',
+        'Legacy Modernization',
+      ],
+    },
+  ]
+
+  const techStackMatrix = [
+    {
+      category: 'Backend Engineering',
+      icon: '⚙️',
+      color: 'from-blue-500/10 to-indigo-500/10 border-blue-500/20',
+      badge: 'Python • Node • Go',
+      items: [
+        { name: 'Python', desc: 'Django, FastAPI, Flask & any Python framework' },
+        { name: 'JavaScript / Node.js', desc: 'Express, NestJS, and ultra-fast ElysiaJS' },
+        { name: 'Golang', desc: 'High-throughput Gin web services & microservices' },
+      ],
+    },
+    {
+      category: 'Frontend Development',
+      icon: '💻',
+      color: 'from-cyan-500/10 to-blue-500/10 border-cyan-500/20',
+      badge: 'Angular • React',
+      items: [
+        { name: 'Angular', desc: 'Enterprise-grade SPAs, reactive forms & state architecture' },
+        { name: 'React', desc: 'Modern React 19, Vite, Next.js / TanStack Start' },
+        { name: 'TypeScript & Styling', desc: 'Strict end-to-end typing, Tailwind CSS & clean design' },
+      ],
+    },
+    {
+      category: 'AI Solutions & Applications',
+      icon: '🤖',
+      color: 'from-purple-500/10 to-pink-500/10 border-purple-500/20',
+      badge: 'MCP • ChatBots • AI Apps',
+      items: [
+        { name: 'MCP (Model Context Protocol)', desc: 'Standardized tools & context bridges connecting LLMs to data' },
+        { name: 'AI ChatBots & Agents', desc: 'Custom conversational bots for support, sales, and internal workflows' },
+        { name: 'AI-Powered Applications', desc: 'Semantic search, RAG pipelines, and intelligent automation' },
+      ],
+    },
+    {
+      category: 'Deployment & Cloud Solutions',
+      icon: '☁️',
+      color: 'from-emerald-500/10 to-teal-500/10 border-emerald-500/20',
+      badge: 'AWS • GCloud • Contabo',
+      items: [
+        { name: 'AWS (Amazon Web Services)', desc: 'EC2, ECS, Lambda, S3, RDS, CloudFront & VPC networking' },
+        { name: 'Google Cloud (GCloud)', desc: 'Cloud Run, Compute Engine, GKE & IAM security' },
+        { name: 'Contabo VPS Hosting', desc: 'High-compute VPS servers, Docker clustering & Linux administration' },
+      ],
     },
   ]
 
@@ -101,7 +176,7 @@ function ServicesPage() {
           Engineered solutions for ambitious products.
         </h1>
         <p className="max-w-2xl text-base text-[var(--sea-ink-soft)] leading-relaxed sm:text-lg">
-          At JoTech, we combine deep engineering rigor with modern aesthetics. Here is how we help businesses build robust, maintainable, and scalable software.
+          At JoTech, we engineer resilient software across Python, Node.js, Golang, Angular, React, cutting-edge AI (MCP & ChatBots), and multi-cloud deployments in AWS, Google Cloud, and Contabo.
         </p>
       </section>
 
@@ -162,6 +237,47 @@ function ServicesPage() {
             </div>
           </article>
         ))}
+      </section>
+
+      {/* Technology Stack Matrix */}
+      <section className="mt-16">
+        <div className="max-w-2xl mb-8">
+          <p className="island-kicker mb-2">Technology Ecosystem</p>
+          <h2 className="display-title text-2xl font-bold text-[var(--sea-ink)] sm:text-3xl">
+            Our Core Technology Stack
+          </h2>
+          <p className="mt-2 text-sm text-[var(--sea-ink-soft)]">
+            Proven engineering technologies we deploy to solve real-world system challenges with speed and stability.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {techStackMatrix.map((block) => (
+            <div
+              key={block.category}
+              className={`island-shell rounded-2xl p-6 sm:p-8 bg-gradient-to-br ${block.color} border transition hover:shadow-md`}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2.5">
+                  <span className="text-2xl">{block.icon}</span>
+                  <h3 className="text-lg font-bold text-[var(--sea-ink)]">{block.category}</h3>
+                </div>
+                <span className="rounded-full border border-[var(--chip-line)] bg-[var(--chip-bg)] px-2.5 py-0.5 text-[0.7rem] font-bold text-[var(--lagoon-deep)]">
+                  {block.badge}
+                </span>
+              </div>
+
+              <div className="space-y-3 mt-4">
+                {block.items.map((item) => (
+                  <div key={item.name} className="rounded-xl border border-[var(--line)] bg-[var(--chip-bg)]/80 p-3.5 backdrop-blur-xs">
+                    <p className="text-sm font-bold text-[var(--sea-ink)] mb-0.5">{item.name}</p>
+                    <p className="text-xs text-[var(--sea-ink-soft)] m-0 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Engagement Models */}

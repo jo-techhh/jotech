@@ -87,7 +87,7 @@ export default function FeaturedProducts() {
                 <div className="h-2.5 w-2.5 rounded-full bg-amber-400" />
                 <div className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
                 <span className="ml-2 hidden font-mono text-[0.7rem] font-medium text-slate-500 sm:inline dark:text-slate-400">
-                  weekly-planner.jotech.in
+                  weekly-zen-planner.jotech.in
                 </span>
               </div>
               <div className="flex items-center gap-1.5 text-[0.65rem] font-bold">
@@ -181,7 +181,7 @@ export default function FeaturedProducts() {
           {/* Card CTA */}
           <div className="mt-6 pt-4 border-t border-slate-100 dark:border-white/10">
             <a
-              href="https://weekly-planner.jotech.in"
+              href="https://weekly-zen-planner.jotech.in"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-blue-600 transition group-hover:text-blue-600 dark:text-white dark:hover:text-blue-400"

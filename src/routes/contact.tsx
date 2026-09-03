@@ -152,10 +152,10 @@ function ContactPage() {
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                       className="w-full rounded-lg border border-[var(--line)] bg-[var(--chip-bg)] px-3.5 py-2.5 text-sm text-[var(--sea-ink)] focus:border-[var(--lagoon)] focus:outline-none"
                     >
-                      <option value="Full-Stack Web App">Full-Stack Web Application</option>
-                      <option value="Cloud Infrastructure">Cloud Infrastructure & DevOps</option>
-                      <option value="AI Automation">AI Systems & Automation</option>
-                      <option value="Architecture Consulting">Architecture Advisory & Audit</option>
+                      <option value="Full-Stack & Backend (Python, Node, Go, React, Angular)">Full-Stack & Backend (Python / Node / Go / React / Angular)</option>
+                      <option value="AI Solutions & MCP ChatBots">AI Solutions, MCP & Intelligent ChatBots</option>
+                      <option value="Cloud Deployment (AWS, GCloud, Contabo)">Cloud Deployment (AWS / Google Cloud / Contabo)</option>
+                      <option value="Architecture Advisory & Audit">Architecture Advisory & Code Audit</option>
                       <option value="Other">Other Custom Inquiry</option>
                     </select>
                   </div>

@@ -121,23 +121,23 @@ function HomePage() {
           {[
             {
               icon: '⚡',
-              title: 'Full-Stack Web Apps',
-              desc: 'High-speed React, Vite, and SSR architectures engineered for instant responsiveness and peak SEO.',
-            },
-            {
-              icon: '☁️',
-              title: 'Cloud & DevOps',
-              desc: 'Infrastructure as Code, zero-downtime CI/CD pipelines, and secure cloud management.',
+              title: 'Full-Stack & Backend',
+              desc: 'High-speed APIs and architectures built with Python (Django, FastAPI, Flask), Node.js (NestJS, Express, Elysia), Golang Gin, React, and Angular.',
             },
             {
               icon: '🤖',
-              title: 'AI & Automation',
-              desc: 'Empower your teams with intelligent agent workflows, LLM toolchains, and process automation.',
+              title: 'AI Solutions & MCP',
+              desc: 'Custom Model Context Protocol (MCP) integrations, intelligent conversational ChatBots, and production-grade AI-powered applications.',
+            },
+            {
+              icon: '☁️',
+              title: 'Cloud & Deployments',
+              desc: 'Scalable, cost-effective infrastructure engineered across AWS, Google Cloud (GCloud), and Contabo VPS with automated CI/CD.',
             },
             {
               icon: '🛡️',
-              title: 'System Consulting',
-              desc: 'Architectural blueprints, performance optimization, and legacy modernization for high-scale needs.',
+              title: 'System Architecture',
+              desc: 'Performance profiling, database indexing, security hardening, and code modernizations for high-concurrency systems.',
             },
           ].map((service, index) => (
             <article
@@ -154,6 +154,39 @@ function HomePage() {
               </p>
             </article>
           ))}
+        </div>
+
+        {/* Technology Badges Row */}
+        <div className="mt-8 island-shell rounded-2xl p-5 sm:p-6 bg-gradient-to-r from-blue-500/5 via-indigo-500/5 to-emerald-500/5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
+            <div className="flex items-center gap-2">
+              <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-xs font-bold uppercase tracking-wider text-[var(--sea-ink)]">
+                Technologies We Work With Daily
+              </span>
+            </div>
+            <span className="text-xs text-[var(--sea-ink-soft)]">
+              Backend • Frontend • AI • Cloud & VPS
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {[
+              { label: 'Python', sub: 'Django • FastAPI • Flask', color: 'border-blue-300 dark:border-blue-800' },
+              { label: 'JavaScript & Node.js', sub: 'Express • NestJS • ElysiaJS', color: 'border-amber-300 dark:border-amber-800' },
+              { label: 'Golang', sub: 'Gin Web Framework', color: 'border-cyan-300 dark:border-cyan-800' },
+              { label: 'Frontend', sub: 'Angular • React • TypeScript', color: 'border-indigo-300 dark:border-indigo-800' },
+              { label: 'AI Solutions', sub: 'MCP • ChatBots • AI Apps', color: 'border-purple-300 dark:border-purple-800' },
+              { label: 'Cloud & Deployments', sub: 'AWS • Google Cloud • Contabo', color: 'border-emerald-300 dark:border-emerald-800' },
+            ].map((tech) => (
+              <div
+                key={tech.label}
+                className={`inline-flex items-center gap-1.5 rounded-xl border ${tech.color} bg-[var(--chip-bg)] px-3 py-1.5 text-xs shadow-2xs`}
+              >
+                <span className="font-bold text-[var(--sea-ink)]">{tech.label}:</span>
+                <span className="text-[var(--sea-ink-soft)]">{tech.sub}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

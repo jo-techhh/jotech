@@ -32,7 +32,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="https://weekly-planner.jotech.in"
+                  href="https://weekly-zen-planner.jotech.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[var(--sea-ink)] transition flex items-center justify-between"
@@ -123,14 +123,16 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li className="text-[var(--sea-ink-soft)]">
-                Web & App Engineering
-              </li>
-              <li className="text-[var(--sea-ink-soft)]">Cloud & DevOps</li>
-              <li className="text-[var(--sea-ink-soft)]">
-                AI & Workflow Systems
+                Backend (Python, Node, Go)
               </li>
               <li className="text-[var(--sea-ink-soft)]">
-                Architecture Consulting
+                Frontend (Angular & React)
+              </li>
+              <li className="text-[var(--sea-ink-soft)]">
+                AI Solutions & MCP ChatBots
+              </li>
+              <li className="text-[var(--sea-ink-soft)]">
+                Cloud (AWS, GCloud, Contabo)
               </li>
             </ul>
           </div>
