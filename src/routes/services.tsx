@@ -1,6 +1,18 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/services')({
+  head: () => ({
+    meta: [
+      {
+        title: 'Engineering Services & Capabilities — JoTech',
+      },
+      {
+        name: 'description',
+        content:
+          'Explore JoTech engineering capabilities: Full-Stack React & Node Applications, Cloud Infrastructure & DevOps, AI Automation Workflows, and System Advisory.',
+      },
+    ],
+  }),
   component: ServicesPage,
 })
 

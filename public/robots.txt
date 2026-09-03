@@ -1,0 +1,6 @@
+# Robots.txt for JoTech (https://jotech.in)
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://jotech.in/sitemap.xml

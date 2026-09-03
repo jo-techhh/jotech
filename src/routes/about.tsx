@@ -1,6 +1,18 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/about')({
+  head: () => ({
+    meta: [
+      {
+        title: 'About JoTech — Engineering Craft & Philosophy | Jobi S S',
+      },
+      {
+        name: 'description',
+        content:
+          'Learn about JoTech and founder Jobi S S: our philosophy of craft over hype, sub-100ms performance, and rigorous software architecture.',
+      },
+    ],
+  }),
   component: AboutPage,
 })
 

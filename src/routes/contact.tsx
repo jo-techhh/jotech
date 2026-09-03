@@ -2,6 +2,18 @@ import { useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/contact')({
+  head: () => ({
+    meta: [
+      {
+        title: 'Contact Engineering — JoTech | Start a Project',
+      },
+      {
+        name: 'description',
+        content:
+          'Connect directly with lead engineer Jobi S S to discuss web application engineering, cloud systems, AI workflows, or architectural advisory.',
+      },
+    ],
+  }),
   component: ContactPage,
 })
 
