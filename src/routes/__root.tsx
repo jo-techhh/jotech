@@ -91,8 +91,25 @@ export const Route = createRootRoute({
         name: 'twitter:creator',
         content: '@jobiss',
       },
+      {
+        property: 'og:image',
+        content: 'https://jotech.in/logo.svg',
+      },
     ],
     links: [
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/favicon.svg',
+      },
+      {
+        rel: 'alternate icon',
+        href: '/favicon.ico',
+      },
+      {
+        rel: 'apple-touch-icon',
+        href: '/favicon.svg',
+      },
       {
         rel: 'canonical',
         href: 'https://jotech.in/',
@@ -139,6 +156,7 @@ const SCHEMA_ORG_GRAPH = {
       name: 'JoTech',
       legalName: 'JoTech Solutions',
       url: 'https://jotech.in',
+      logo: 'https://jotech.in/logo.svg',
       slogan: 'Products built with purpose.',
       founder: {
         '@id': 'https://jobiss.jotech.in/#person',

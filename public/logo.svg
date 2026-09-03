@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 76" width="100%" height="100%">
+  <defs>
+    <!-- Badge Background Gradient -->
+    <linearGradient id="jt-logo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Badge Border Gradient -->
+    <linearGradient id="jt-logo-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- T-Bar Gradient -->
+    <linearGradient id="jt-logo-tbar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- J-Stem Gradient -->
+    <linearGradient id="jt-logo-jstem" x1="50%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="35%" stop-color="#3b82f6" />
+      <stop offset="75%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <!-- Tech Text Gradient -->
+    <linearGradient id="jt-text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="50%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <style>
+      .jt-title-main {
+        font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        fill: #0f172a;
+      }
+      .jt-subtitle {
+        font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 9.5px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        fill: #64748b;
+      }
+      @media (prefers-color-scheme: dark) {
+        .jt-title-main {
+          fill: #f8fafc;
+        }
+        .jt-subtitle {
+          fill: #94a3b8;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Left Emblem (60x60 scaled badge) -->
+  <g transform="translate(4, 8)">
+    <!-- Base Squircle -->
+    <rect x="0" y="0" width="60" height="60" rx="15" fill="url(#jt-logo-bg)" />
+    <rect x="0" y="0" width="60" height="60" rx="15" fill="none" stroke="url(#jt-logo-border)" stroke-width="1.5" />
+
+    <!-- Internal Glow -->
+    <circle cx="30" cy="20" r="16" fill="#3b82f6" opacity="0.18" />
+
+    <!-- Scaled Mark elements inside 60x60 (scale: 60/128 ≈ 0.46875) -->
+    <g transform="scale(0.46875)">
+      <!-- T Bar -->
+      <rect x="28" y="32" width="72" height="14" rx="7" fill="url(#jt-logo-tbar)" />
+
+      <!-- J Stem & Hook -->
+      <path
+        d="M64 38 V74 C64 88 52 96 40 96 C29 96 24 86 24 76"
+        fill="none"
+        stroke="url(#jt-logo-jstem)"
+        stroke-width="14"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+
+      <!-- Emerald Node -->
+      <circle cx="92" cy="74" r="9" fill="#10b981" opacity="0.25" />
+      <circle cx="92" cy="74" r="5.5" fill="#10b981" />
+      <circle cx="92" cy="74" r="2.2" fill="#a7f3d0" />
+    </g>
+  </g>
+
+  <!-- Right Typography -->
+  <g transform="translate(80, 42)">
+    <text class="jt-title-main" x="0" y="0">
+      Jo<tspan fill="url(#jt-text-grad)">Tech</tspan>
+    </text>
+    <text class="jt-subtitle" x="1" y="19">
+      SOFTWARE STUDIO
+    </text>
+  </g>
+</svg>

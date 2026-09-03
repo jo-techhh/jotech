@@ -1,3 +1,5 @@
+import Logo from './Logo'
+
 export default function Footer() {
   const year = new Date().getFullYear()
 
@@ -6,11 +8,8 @@ export default function Footer() {
       <div className="page-wrap">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 pb-10 border-b border-[var(--line)]">
           <div className="sm:col-span-1">
-            <div className="inline-flex items-center gap-2 mb-3">
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
-              <span className="text-lg font-extrabold tracking-tight text-[var(--sea-ink)]">
-                JoTech
-              </span>
+            <div className="mb-3">
+              <Logo size="md" showText={true} />
             </div>
             <p className="max-w-md text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-3">
               Independent software ecosystem engineering resilient applications,

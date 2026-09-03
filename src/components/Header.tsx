@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import ThemeToggle from './ThemeToggle'
+import Logo from './Logo'
 
 export default function Header() {
   return (
@@ -8,15 +9,9 @@ export default function Header() {
         <h2 className="m-0 flex-shrink-0 text-base font-semibold tracking-tight">
           <Link
             to="/"
-            className="inline-flex items-center gap-2.5 rounded-full border border-slate-200/80 dark:border-white/10 bg-white/90 dark:bg-[#0f1724]/90 px-3.5 py-1.5 text-sm font-bold no-underline shadow-2xs backdrop-blur-md transition hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-xs sm:px-4 sm:py-2"
+            className="group inline-flex items-center rounded-full border border-slate-200/80 dark:border-white/10 bg-white/90 dark:bg-[#0f1724]/90 px-3 py-1.5 text-sm font-bold no-underline shadow-2xs backdrop-blur-md transition hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-xs sm:px-3.5 sm:py-1.5"
           >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-blue-600"></span>
-            </span>
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-slate-900 bg-clip-text font-extrabold tracking-tight text-transparent dark:from-blue-400 dark:via-indigo-300 dark:to-white">
-              JoTech
-            </span>
+            <Logo size="sm" showText={true} />
           </Link>
         </h2>
 
