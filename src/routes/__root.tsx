@@ -6,7 +6,7 @@ import Header from '../components/Header'
 
 import appCss from '../styles.css?url'
 
-const THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getItem('theme');var mode=(stored==='light'||stored==='dark')?stored:'light';var root=document.documentElement;root.classList.remove('dark');root.classList.add(mode);root.setAttribute('data-theme',mode);root.style.colorScheme=mode;}catch(e){}})();`
+const THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getItem('theme');var mode=(stored==='light'||stored==='dark')?stored:'dark';var root=document.documentElement;root.classList.remove('light','dark');root.classList.add(mode);root.setAttribute('data-theme',mode);root.style.colorScheme=mode;}catch(e){}})();`
 
 export const Route = createRootRoute({
   head: () => ({
@@ -19,17 +19,17 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'JoTech — Products Built with Purpose | Modern Software Studio',
+        title: 'JoTech — Independent Software, AI & Engineering by Jobi S S',
       },
       {
         name: 'description',
         content:
-          'JoTech is an independent software ecosystem created by Jobi S S. Explore our practical digital products: Weekly Planner, PocketFlow, and the Jotech Engineering Blog.',
+          'JoTech is an independent software ecosystem by Jobi S S, building practical products, AI applications, backend systems and modern engineering solutions.',
       },
       {
         name: 'keywords',
         content:
-          'jotech, jobi s s, python, django, fastapi, flask, node.js, express, nestjs, elysiajs, golang gin, angular, react, typescript, mcp model context protocol, ai chatbots, ai powered applications, aws, google cloud, contabo, software engineering, digital products, founder-led software studio',
+          'jotech, jobi s s, independent software builder, python backend development, fastapi, ai application development, model context protocol mcp, systems architecture, cloud infrastructure, weekly planner, pocketflow, software ecosystem',
       },
       {
         name: 'author',
@@ -45,9 +45,9 @@ export const Route = createRootRoute({
       },
       {
         name: 'theme-color',
-        content: '#ffffff',
+        content: '#08090a',
       },
-      /* Open Graph / Facebook */
+      /* Open Graph / Social */
       {
         property: 'og:type',
         content: 'website',
@@ -58,20 +58,24 @@ export const Route = createRootRoute({
       },
       {
         property: 'og:title',
-        content: 'JoTech — Products Built with Purpose | Modern Software Studio',
+        content: 'JoTech — Independent Software, AI & Engineering by Jobi S S',
       },
       {
         property: 'og:description',
         content:
-          'Discover practical digital products, tools, and system engineering insights built under the Jotech ecosystem by founder Jobi S S.',
+          'JoTech is an independent software ecosystem by Jobi S S, building practical products, AI applications, backend systems and modern engineering solutions.',
       },
       {
         property: 'og:url',
-        content: 'https://jotech.in/',
+        content: 'https://www.jotech.in/',
       },
       {
         property: 'og:locale',
         content: 'en_US',
+      },
+      {
+        property: 'og:image',
+        content: 'https://www.jotech.in/logo.svg',
       },
       /* Twitter Card */
       {
@@ -80,20 +84,20 @@ export const Route = createRootRoute({
       },
       {
         name: 'twitter:title',
-        content: 'JoTech — Products Built with Purpose',
+        content: 'JoTech — Independent Software, AI & Engineering by Jobi S S',
       },
       {
         name: 'twitter:description',
         content:
-          'Independent software ecosystem engineered by Jobi S S: Weekly Planner, PocketFlow, and the Jotech Blog.',
+          'JoTech is an independent software ecosystem by Jobi S S, building practical products, AI applications, backend systems and modern engineering solutions.',
       },
       {
         name: 'twitter:creator',
         content: '@jobiss',
       },
       {
-        property: 'og:image',
-        content: 'https://jotech.in/logo.svg',
+        name: 'twitter:image',
+        content: 'https://www.jotech.in/logo.svg',
       },
     ],
     links: [
@@ -112,7 +116,7 @@ export const Route = createRootRoute({
       },
       {
         rel: 'canonical',
-        href: 'https://jotech.in/',
+        href: 'https://www.jotech.in/',
       },
       {
         rel: 'stylesheet',
@@ -131,172 +135,80 @@ const SCHEMA_ORG_GRAPH = {
       '@id': 'https://jobiss.jotech.in/#person',
       name: 'Jobi S S',
       url: 'https://jobiss.jotech.in',
-      jobTitle: 'Founder & Software Systems Engineer',
+      jobTitle: 'Founder, Systems Engineer & Independent Builder',
       worksFor: {
-        '@id': 'https://jotech.in/#organization',
+        '@id': 'https://www.jotech.in/#organization',
       },
       description:
-        'Founder and creator of the Jotech software ecosystem, engineering digital products and exploring modern application architectures.',
+        'Founder and independent software builder behind JoTech, engineering practical products, backend systems, and AI workflows.',
       knowsAbout: [
         'Software Engineering',
-        'Full-Stack Web Development',
+        'Backend Systems',
         'Python',
-        'Django',
         'FastAPI',
-        'Flask',
-        'JavaScript & TypeScript',
-        'Node.js',
-        'Express',
-        'NestJS',
-        'ElysiaJS',
-        'Golang',
-        'Gin Framework',
-        'Angular',
         'React',
-        'MCP (Model Context Protocol)',
-        'Conversational AI & ChatBots',
-        'AI-Powered Applications',
-        'AWS',
-        'Google Cloud',
-        'Contabo VPS Hosting',
-        'Cloud Architecture',
-        'System Design',
+        'TypeScript',
+        'PostgreSQL',
+        'Model Context Protocol (MCP)',
+        'AI Engineering',
+        'Cloud Infrastructure & Docker',
+        'Distributed Systems',
       ],
-      sameAs: ['https://jobiss.jotech.in'],
+      sameAs: [
+        'https://jobiss.jotech.in',
+        'https://github.com/jobiss',
+        'https://linkedin.com/in/jobiss',
+      ],
     },
     {
       '@type': 'Organization',
-      '@id': 'https://jotech.in/#organization',
+      '@id': 'https://www.jotech.in/#organization',
       name: 'JoTech',
-      legalName: 'JoTech Solutions',
-      url: 'https://jotech.in',
-      logo: 'https://jotech.in/logo.svg',
-      slogan: 'Products built with purpose.',
+      url: 'https://www.jotech.in',
+      logo: 'https://www.jotech.in/logo.svg',
+      slogan: 'Independent software. Practical engineering.',
       founder: {
         '@id': 'https://jobiss.jotech.in/#person',
       },
       description:
-        'Independent software studio and digital product ecosystem founded by Jobi S S, dedicated to engineering resilient digital tools, AI solutions (MCP & ChatBots), and multi-cloud solutions in AWS, Google Cloud, and Contabo.',
-      knowsAbout: [
-        'Python (Django, FastAPI, Flask)',
-        'Node.js (Express, NestJS, ElysiaJS)',
-        'Golang Gin',
-        'Angular',
-        'React',
-        'Model Context Protocol (MCP)',
-        'AI ChatBots & Intelligent Applications',
-        'AWS Cloud Infrastructure',
-        'Google Cloud Solutions',
-        'Contabo VPS Hosting',
-        'DevOps & CI/CD',
-      ],
+        'JoTech is an independent software ecosystem built by Jobi S S, focused on practical digital products, AI automation, and reliable backend systems.',
       makesOffer: [
-        { '@id': 'https://weekly-zen-planner.jotech.in/#software' },
+        { '@id': 'https://weekly-planner.jotech.in/#software' },
         { '@id': 'https://pocket-flow.jotech.in/#software' },
       ],
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://jotech.in/#website',
-      url: 'https://jotech.in/',
+      '@id': 'https://www.jotech.in/#website',
+      url: 'https://www.jotech.in/',
       name: 'JoTech',
-      headline: 'JoTech — Products Built with Purpose',
+      headline: 'JoTech — Independent Software, AI & Engineering by Jobi S S',
       publisher: {
-        '@id': 'https://jotech.in/#organization',
+        '@id': 'https://www.jotech.in/#organization',
       },
       creator: {
         '@id': 'https://jobiss.jotech.in/#person',
       },
       inLanguage: 'en-US',
       description:
-        'Official home and product ecosystem for JoTech applications and tools.',
-    },
-    {
-      '@type': 'WebPage',
-      '@id': 'https://jotech.in/#webpage',
-      url: 'https://jotech.in/',
-      name: 'JoTech — Products Built with Purpose | Modern Software Studio',
-      isPartOf: {
-        '@id': 'https://jotech.in/#website',
-      },
-      about: {
-        '@id': 'https://jotech.in/#organization',
-      },
-      mainEntity: {
-        '@id': 'https://jotech.in/#products-list',
-      },
-      description:
-        'Explore practical digital products built under the JoTech ecosystem: Weekly Planner, PocketFlow, and the Jotech Blog.',
-    },
-    {
-      '@type': 'ItemList',
-      '@id': 'https://jotech.in/#products-list',
-      name: 'JoTech Featured Products Collection',
-      description:
-        'Collection of practical digital products, tools, and platforms built and maintained under the Jotech ecosystem.',
-      numberOfItems: 3,
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Weekly Planner',
-          item: {
-            '@id': 'https://weekly-zen-planner.jotech.in/#software',
-          },
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'PocketFlow',
-          item: {
-            '@id': 'https://pocket-flow.jotech.in/#software',
-          },
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: 'Jotech Blog',
-          item: {
-            '@id': 'https://blog.jotech.in/#blog',
-          },
-        },
-      ],
+        'Official home of the JoTech independent software ecosystem.',
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': 'https://weekly-zen-planner.jotech.in/#software',
+      '@id': 'https://weekly-planner.jotech.in/#software',
       name: 'Weekly Planner',
       alternateName: 'JoTech Weekly Planner',
-      url: 'https://weekly-zen-planner.jotech.in',
+      url: 'https://weekly-planner.jotech.in',
       applicationCategory: 'https://schema.org/BusinessApplication',
-      operatingSystem: 'Web, All modern browsers (Chrome, Firefox, Safari, Edge)',
+      operatingSystem: 'Web, All modern browsers',
       author: {
         '@id': 'https://jobiss.jotech.in/#person',
       },
       creator: {
-        '@id': 'https://jotech.in/#organization',
-      },
-      maintainer: {
-        '@id': 'https://jobiss.jotech.in/#person',
+        '@id': 'https://www.jotech.in/#organization',
       },
       description:
-        'A simple and focused weekly planning application designed to help you organize tasks, priorities, and goals in one place.',
-      keywords:
-        'weekly planner, online weekly planner, productivity planner, weekly task planner, digital weekly planner, weekly planning tool',
-      offers: {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-      featureList: [
-        'Weekly calendar layout with active today highlights',
-        'Task management and completion checkoffs',
-        'Priority categorization (High, Medium, Low)',
-        'Weekly goal progress tracking',
-        'Deep-work focus time blocks',
-      ],
+        'Plan your week, organize priorities and focus on what actually matters without cognitive clutter.',
     },
     {
       '@type': 'SoftwareApplication',
@@ -305,57 +217,28 @@ const SCHEMA_ORG_GRAPH = {
       alternateName: 'JoTech PocketFlow',
       url: 'https://pocket-flow.jotech.in',
       applicationCategory: 'https://schema.org/FinanceApplication',
-      operatingSystem: 'Web, All modern browsers (Chrome, Firefox, Safari, Edge)',
+      operatingSystem: 'Web, All modern browsers',
       author: {
         '@id': 'https://jobiss.jotech.in/#person',
       },
       creator: {
-        '@id': 'https://jotech.in/#organization',
-      },
-      maintainer: {
-        '@id': 'https://jobiss.jotech.in/#person',
+        '@id': 'https://www.jotech.in/#organization',
       },
       description:
-        'PocketFlow is a personal finance application designed to help users track expenses, understand spending patterns, and manage their financial activity with clarity.',
-      keywords:
-        'personal finance app, expense tracker, expense management, personal expense tracker, finance management app, spending tracker',
-      offers: {
-        '@type': 'Offer',
-        price: '0',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-      featureList: [
-        'Real-time cash flow monitoring',
-        'Monthly inflow vs outflow tracking',
-        'Categorized expense allocation charts',
-        'Transaction ledger with deposit/withdrawal indicators',
-        'Budget discipline and spending analysis',
-      ],
+        'Understand your money, track transactions and stay in control of your financial flow.',
     },
     {
       '@type': 'Blog',
       '@id': 'https://blog.jotech.in/#blog',
-      name: 'Jotech Blog',
+      name: 'JoTech Blog',
       url: 'https://blog.jotech.in',
-      headline: 'Ideas, engineering, and things worth building.',
-      description:
-        'The Jotech Blog shares practical insights about software engineering, system design, application architecture, AI, development, and lessons learned while building products.',
-      keywords:
-        'software engineering blog, system design, software architecture, backend development, AI engineering, programming, application development',
-      about: [
-        { '@type': 'Thing', name: 'Software Engineering' },
-        { '@type': 'Thing', name: 'System Design' },
-        { '@type': 'Thing', name: 'Cloud Architecture' },
-        { '@type': 'Thing', name: 'AI Engineering' },
-      ],
+      headline: 'Practical engineering notes, software architecture & AI.',
       publisher: {
-        '@id': 'https://jotech.in/#organization',
+        '@id': 'https://www.jotech.in/#organization',
       },
       author: {
         '@id': 'https://jobiss.jotech.in/#person',
       },
-      inLanguage: 'en-US',
     },
   ],
 }
@@ -371,7 +254,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         />
         <HeadContent />
       </head>
-      <body className="font-sans antialiased [overflow-wrap:anywhere] selection:bg-[rgba(79,184,178,0.24)]">
+      <body className="font-sans antialiased selection:bg-indigo-500/30 selection:text-white">
         <Header />
         {children}
         <Footer />

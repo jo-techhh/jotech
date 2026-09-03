@@ -4,12 +4,12 @@ export const Route = createFileRoute('/about')({
   head: () => ({
     meta: [
       {
-        title: 'About JoTech — Engineering Craft & Philosophy | Jobi S S',
+        title: 'About JoTech — Built Independently by Jobi S S',
       },
       {
         name: 'description',
         content:
-          'Learn about JoTech and founder Jobi S S: our philosophy of craft over hype, sub-100ms performance, and rigorous software architecture.',
+          'Learn about the JoTech philosophy: an independent software ecosystem built by Jobi S S, prioritizing craft, system reliability, and practical software products.',
       },
     ],
   }),
@@ -19,70 +19,82 @@ export const Route = createFileRoute('/about')({
 function AboutPage() {
   const principles = [
     {
+      number: '01',
       title: 'Craft Over Hype',
-      desc: 'We adopt technologies that solve real engineering problems with predictability, avoiding brittle churn and unneeded complexity.',
+      desc: 'Adopting technologies that solve real engineering problems with predictability, avoiding brittle churn and unneeded dependencies.',
     },
     {
-      title: 'Performance as a Feature',
-      desc: 'Speed is user trust. We design applications that load instantly, respond with sub-100ms feedback, and conserve client resources.',
+      number: '02',
+      title: 'Performance as a Core Feature',
+      desc: 'Speed builds user trust. Applications are engineered to load instantly, respond with sub-100ms feedback, and conserve memory.',
     },
     {
-      title: 'Security & Type Safety',
-      desc: 'Strict end-to-end type safety across client and server boundaries drastically minimizes runtime bugs and data inconsistency.',
+      number: '03',
+      title: 'End-to-End Type Safety',
+      desc: 'Strict end-to-end contracts across backend APIs and frontend clients minimize runtime bugs and ensure rock-solid data integrity.',
     },
     {
-      title: 'Built to Evolve',
-      desc: 'Clean interfaces, modular routes, and decoupled services ensure that systems built today can expand smoothly tomorrow.',
+      number: '04',
+      title: 'One-Person Builder Velocity',
+      desc: 'No corporate meetings, no bloated management overhead. Direct accountability from system architecture to production deployment.',
     },
   ]
 
   return (
-    <main className="page-wrap px-4 py-12">
-      {/* Hero */}
-      <section className="island-shell relative overflow-hidden rounded-3xl p-8 sm:p-12 mb-12">
-        <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(79,184,178,0.22),transparent_70%)]" />
-        <p className="island-kicker mb-2">About JoTech</p>
-        <h1 className="display-title mb-4 text-3xl font-extrabold text-[var(--sea-ink)] sm:text-5xl">
-          We engineer systems that help ambitious businesses thrive.
+    <main className="page-wrap py-12 sm:py-20">
+      {/* Hero Header */}
+      <section className="mb-14 max-w-3xl">
+        <div className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--chip-bg)] px-3.5 py-1 text-xs font-mono text-indigo-400 mb-4">
+          <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+          INDEPENDENT BUILDER PHILOSOPHY
+        </div>
+        <h1 className="display-title text-4xl sm:text-6xl font-extrabold tracking-tight text-[var(--sea-ink)] mb-6">
+          Software built with craft, discipline, and purpose.
         </h1>
-        <p className="max-w-2xl text-base text-[var(--sea-ink-soft)] leading-relaxed sm:text-lg">
-          JoTech was founded with a singular purpose: to bring architectural clarity, modern developer velocity, and rigorous software craft to web applications and cloud services.
+        <p className="text-base sm:text-lg text-[var(--sea-ink-soft)] leading-relaxed">
+          JoTech was created by <strong>Jobi S S</strong> to explore modern engineering, build practical products like Weekly Planner and PocketFlow, and share transparent technical lessons from production systems.
         </p>
       </section>
 
-      {/* Story & Philosophy */}
-      <section className="grid gap-8 md:grid-cols-2 mb-14">
-        <div className="island-shell rounded-2xl p-6 sm:p-8">
+      {/* Story Grid */}
+      <section className="grid gap-8 md:grid-cols-2 mb-16">
+        <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface-glass)] p-6 sm:p-8 backdrop-blur-md">
+          <span className="mono-meta text-indigo-400 mb-2 block">
+            THE STORY
+          </span>
           <h2 className="display-title text-xl font-bold text-[var(--sea-ink)] mb-3">
-            Our Mission
+            Why JoTech exists
           </h2>
-          <p className="text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-4">
-            In an era where software stacks are increasingly fragmented, JoTech cuts through the noise. We believe software should be lean, delightful to interact with, and rock-solid under load.
+          <p className="text-xs sm:text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-4">
+            In an era where modern software is often bloated, slow, and buried beneath corporate committees, JoTech cuts through the noise. It is a personal digital workshop where ideas are rapidly prototyped, hardened, and deployed to production.
           </p>
-          <p className="text-sm text-[var(--sea-ink-soft)] leading-relaxed">
-            Whether starting with a minimal, high-velocity prototype or modernizing an enterprise-grade platform, we engineer systems that teams love to maintain and scale.
+          <p className="text-xs sm:text-sm text-[var(--sea-ink-soft)] leading-relaxed">
+            Every product in the ecosystem is built to solve actual problems—whether that means organizing a busy week or monitoring financial flows without giving away your privacy.
           </p>
         </div>
 
-        <div className="island-shell rounded-2xl p-6 sm:p-8">
+        <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface-glass)] p-6 sm:p-8 backdrop-blur-md">
+          <span className="mono-meta text-indigo-400 mb-2 block">
+            THE ARCHITECTURE
+          </span>
           <h2 className="display-title text-xl font-bold text-[var(--sea-ink)] mb-3">
-            The Modern Foundation
+            Built on solid foundations
           </h2>
-          <p className="text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-4">
-            This platform is built on modern full-stack primitives: <strong>TanStack Start</strong>, <strong>React 19</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS</strong>.
+          <p className="text-xs sm:text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-4">
+            The platform is built on modern primitives: <strong>TanStack Start</strong>, <strong>React 19</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>. Backends are powered by <strong>Python (FastAPI / Django)</strong>, <strong>PostgreSQL</strong>, and Dockerized cloud microservices.
           </p>
-          <p className="text-sm text-[var(--sea-ink-soft)] leading-relaxed">
-            By leveraging isomorphic execution, file-based routing, and progressive streaming, we achieve top-tier performance without sacrificing developer velocity.
+          <p className="text-xs sm:text-sm text-[var(--sea-ink-soft)] leading-relaxed">
+            By leveraging isomorphic execution, file-based routing, and progressive hydration, applications achieve instantaneous page loads and predictable reliability.
           </p>
         </div>
       </section>
 
       {/* Core Principles */}
-      <section className="island-shell rounded-2xl p-8 sm:p-12 mb-14">
+      <section className="mb-16">
         <div className="max-w-xl mb-8">
-          <p className="island-kicker mb-2">How We Think</p>
-          <h2 className="display-title text-2xl font-bold text-[var(--sea-ink)] sm:text-3xl">
-            Our Core Principles
+          <p className="mono-meta text-indigo-400 mb-2">Core Values</p>
+          <h2 className="display-title text-2xl sm:text-3xl font-bold text-[var(--sea-ink)]">
+            Engineering Principles
           </h2>
         </div>
 
@@ -90,12 +102,15 @@ function AboutPage() {
           {principles.map((principle) => (
             <div
               key={principle.title}
-              className="rounded-xl border border-[var(--line)] bg-[var(--chip-bg)] p-6"
+              className="rounded-xl border border-[var(--line)] bg-[var(--surface)] p-6"
             >
+              <span className="mono-meta text-indigo-400 font-bold block mb-2 text-xs">
+                {principle.number}
+              </span>
               <h3 className="text-base font-bold text-[var(--sea-ink)] mb-2">
                 {principle.title}
               </h3>
-              <p className="m-0 text-sm text-[var(--sea-ink-soft)] leading-relaxed">
+              <p className="m-0 text-xs text-[var(--sea-ink-soft)] leading-relaxed">
                 {principle.desc}
               </p>
             </div>
@@ -103,20 +118,30 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Ready to improve later banner */}
-      <section className="island-shell rounded-2xl p-8 text-center sm:p-10 border border-[rgba(50,143,151,0.3)]">
-        <h2 className="display-title text-xl font-bold text-[var(--sea-ink)] sm:text-2xl mb-2">
-          Ready for continuous improvement
+      {/* Founder Direct CTA */}
+      <section className="rounded-2xl border border-[var(--line)] bg-[var(--surface-glass)] p-8 text-center backdrop-blur-md">
+        <h2 className="display-title text-2xl font-bold text-[var(--sea-ink)] mb-2">
+          Want to discuss architecture or collaborate?
         </h2>
-        <p className="max-w-xl mx-auto text-sm text-[var(--sea-ink-soft)] mb-6">
-          This setup is designed for frictionless iterations. From adding authentication and persistent databases to deploying AI agent tools, JoTech's modular architecture expands with your vision.
+        <p className="text-sm text-[var(--sea-ink-soft)] mb-6 max-w-md mx-auto">
+          Connect directly with founder Jobi S S to discuss systems engineering, AI integrations, or custom product builds.
         </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center gap-2 rounded-full bg-[var(--sea-ink)] px-6 py-2.5 text-sm font-semibold text-white no-underline transition hover:opacity-90"
-        >
-          Contact Our Engineering Team &rarr;
-        </Link>
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <Link
+            to="/contact"
+            className="rounded-xl bg-indigo-600 hover:bg-indigo-500 px-6 py-2.5 text-xs font-semibold text-white shadow-md shadow-indigo-600/20 transition"
+          >
+            Get in touch →
+          </Link>
+          <a
+            href="https://jobiss.jotech.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xl border border-[var(--line)] bg-[var(--surface)] hover:bg-[var(--surface-hover)] px-5 py-2.5 text-xs font-semibold text-[var(--sea-ink)] transition"
+          >
+            Jobi's Portfolio ↗
+          </a>
+        </div>
       </section>
     </main>
   )

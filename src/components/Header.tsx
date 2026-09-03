@@ -6,94 +6,130 @@ import Logo from './Logo'
 export default function Header() {
   const location = useLocation()
   const isHomePage = location.pathname === '/'
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeHash, setActiveHash] = useState<string>('')
 
   useEffect(() => {
-    if (!isHomePage) {
-      setActiveHash('')
-      return
-    }
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
 
-    const checkSection = () => {
+      if (!isHomePage) {
+        setActiveHash('')
+        return
+      }
+
       const hash = window.location.hash.replace('#', '')
       const productsEl = document.getElementById('products')
-      if (productsEl) {
-        const rect = productsEl.getBoundingClientRect()
-        // Highlight products when its section occupies viewport
-        if (rect.top <= window.innerHeight * 0.45 && rect.bottom >= 150) {
-          setActiveHash('products')
-          return
-        }
-      }
-      if (hash === 'products') {
+      const engineeringEl = document.getElementById('engineering')
+      const ecosystemEl = document.getElementById('ecosystem')
+
+      const scrollPos = window.scrollY + 180
+
+      if (engineeringEl && scrollPos >= engineeringEl.offsetTop) {
+        setActiveHash('engineering')
+      } else if (productsEl && scrollPos >= productsEl.offsetTop) {
         setActiveHash('products')
+      } else if (ecosystemEl && scrollPos >= ecosystemEl.offsetTop) {
+        setActiveHash('ecosystem')
+      } else if (hash) {
+        setActiveHash(hash)
       } else {
         setActiveHash('')
       }
     }
 
-    checkSection()
-    window.addEventListener('scroll', checkSection, { passive: true })
-    window.addEventListener('hashchange', checkSection)
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('hashchange', handleScroll)
     return () => {
-      window.removeEventListener('scroll', checkSection)
-      window.removeEventListener('hashchange', checkSection)
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('hashchange', handleScroll)
     }
   }, [isHomePage, location.hash])
 
-  const isProductsActive = isHomePage && activeHash === 'products'
-  const isHomeActive = isHomePage && !isProductsActive
+  // Prevent scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileMenuOpen])
+
+  const scrollToSection = (id: string) => {
+    setMobileMenuOpen(false)
+    if (isHomePage) {
+      const el = document.getElementById(id)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+        history.pushState(null, '', `#${id}`)
+        setActiveHash(id)
+      }
+    } else {
+      window.location.href = `/#${id}`
+    }
+  }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--header-bg)] px-4 backdrop-blur-xl transition-colors">
-      <nav className="page-wrap flex flex-wrap items-center justify-between gap-x-4 gap-y-2 py-3 sm:py-3.5">
-        <h2 className="m-0 flex-shrink-0 text-base font-semibold tracking-tight">
-          <Link
-            to="/"
-            className="group inline-flex items-center rounded-full border border-slate-200/80 dark:border-white/10 bg-white/90 dark:bg-[#0f1724]/90 px-3 py-1.5 text-sm font-bold no-underline shadow-2xs backdrop-blur-md transition hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-xs sm:px-3.5 sm:py-1.5"
-          >
-            <Logo size="sm" showText={true} />
-          </Link>
-        </h2>
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'border-b border-[var(--line)] bg-[var(--header-bg)] backdrop-blur-xl py-3 shadow-sm'
+          : 'border-b border-transparent bg-transparent py-4'
+      }`}
+    >
+      <nav
+        className="page-wrap flex items-center justify-between gap-4"
+        aria-label="Main Navigation"
+      >
+        {/* Left: Custom Minimal JoTech Wordmark */}
+        <Link
+          to="/"
+          className="group inline-flex items-center gap-2"
+          onClick={() => {
+            if (isHomePage) {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              history.replaceState(null, '', window.location.pathname)
+              setActiveHash('')
+            }
+          }}
+        >
+          <Logo size="sm" showText={true} />
+        </Link>
 
-        <div className="order-3 flex w-full items-center justify-center gap-x-1 sm:gap-x-2 pb-1 text-sm font-semibold sm:order-none sm:w-auto sm:justify-start sm:pb-0">
-          <Link
-            to="/"
-            onClick={() => {
-              if (isHomePage) {
-                window.scrollTo({ top: 0, behavior: 'smooth' })
-                history.replaceState(null, '', window.location.pathname)
-                setActiveHash('')
-              }
-            }}
-            className={`nav-link ${isHomeActive ? 'is-active' : ''}`}
-          >
-            Home
-          </Link>
-          <a
-            href="/#products"
-            onClick={(e) => {
-              if (isHomePage) {
-                e.preventDefault()
-                const el = document.getElementById('products')
-                if (el) {
-                  el.scrollIntoView({ behavior: 'smooth' })
-                  history.pushState(null, '', '#products')
-                  setActiveHash('products')
-                }
-              }
-            }}
-            className={`nav-link ${isProductsActive ? 'is-active' : ''}`}
+        {/* Center: Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-1 rounded-full border border-[var(--line)] bg-[var(--surface-glass)] px-3 py-1.5 shadow-2xs backdrop-blur-md">
+          <button
+            type="button"
+            onClick={() => scrollToSection('products')}
+            className={`nav-link cursor-pointer ${
+              activeHash === 'products' ? 'is-active' : ''
+            }`}
           >
             Products
-          </a>
-          <Link
-            to="/services"
-            className="nav-link"
-            activeProps={{ className: 'nav-link is-active' }}
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollToSection('ecosystem')}
+            className={`nav-link cursor-pointer ${
+              activeHash === 'ecosystem' ? 'is-active' : ''
+            }`}
           >
-            Services
-          </Link>
+            Ecosystem
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollToSection('engineering')}
+            className={`nav-link cursor-pointer ${
+              activeHash === 'engineering' ? 'is-active' : ''
+            }`}
+          >
+            Engineering
+          </button>
           <Link
             to="/about"
             className="nav-link"
@@ -101,25 +137,142 @@ export default function Header() {
           >
             About
           </Link>
-          <Link
-            to="/contact"
-            className="nav-link"
-            activeProps={{ className: 'nav-link is-active' }}
+          <a
+            href="https://blog.jotech.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link group inline-flex items-center gap-1"
           >
-            Contact
-          </Link>
+            <span>Blog</span>
+            <span className="text-[0.65rem] opacity-60 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+              ↗
+            </span>
+          </a>
         </div>
 
-        <div className="ml-auto flex items-center gap-2.5 sm:ml-0">
+        {/* Right CTA & Controls */}
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+
           <Link
             to="/contact"
-            className="hidden rounded-full bg-blue-600 hover:bg-blue-500 px-4 py-1.5 text-xs font-bold text-white no-underline shadow-sm shadow-blue-500/20 transition hover:-translate-y-0.5 sm:inline-flex"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--surface-strong)] px-4 py-1.5 text-xs font-semibold text-[var(--sea-ink)] hover:border-indigo-500/50 hover:bg-indigo-500/10 transition-all duration-200"
           >
-            Let's Talk
+            <span>Build with me</span>
+            <span className="cta-arrow text-indigo-400">→</span>
           </Link>
-          <ThemeToggle />
+
+          {/* Mobile Hamburger Toggle Button */}
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden flex h-9 w-9 items-center justify-center rounded-xl border border-[var(--line)] bg-[var(--surface)] text-[var(--sea-ink)] hover:bg-[var(--surface-hover)] transition cursor-pointer"
+            aria-label={mobileMenuOpen ? 'Close Navigation' : 'Open Navigation'}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? (
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            ) : (
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="4" y1="8" x2="20" y2="8" />
+                <line x1="4" y1="16" x2="20" y2="16" />
+              </svg>
+            )}
+          </button>
         </div>
       </nav>
+
+      {/* Mobile Full-Screen Navigation Panel */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 top-[57px] z-40 flex flex-col justify-between bg-[var(--bg-base)]/98 p-6 backdrop-blur-2xl md:hidden border-t border-[var(--line)] overflow-y-auto animate-fadeIn">
+          <div className="flex flex-col gap-3 pt-4">
+            <span className="mono-meta text-[var(--sea-ink-muted)] mb-2">
+              Navigation
+            </span>
+            <button
+              type="button"
+              onClick={() => scrollToSection('products')}
+              className="text-left text-xl font-semibold text-[var(--sea-ink)] py-2 border-b border-[var(--line-subtle)]"
+            >
+              Products
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('ecosystem')}
+              className="text-left text-xl font-semibold text-[var(--sea-ink)] py-2 border-b border-[var(--line-subtle)]"
+            >
+              Ecosystem
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection('engineering')}
+              className="text-left text-xl font-semibold text-[var(--sea-ink)] py-2 border-b border-[var(--line-subtle)]"
+            >
+              Engineering
+            </button>
+            <Link
+              to="/about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-xl font-semibold text-[var(--sea-ink)] py-2 border-b border-[var(--line-subtle)]"
+            >
+              About
+            </Link>
+            <a
+              href="https://blog.jotech.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl font-semibold text-[var(--sea-ink)] py-2 border-b border-[var(--line-subtle)] flex items-center justify-between"
+            >
+              <span>JoTech Blog</span>
+              <span className="text-sm opacity-60">↗</span>
+            </a>
+            <a
+              href="https://jobiss.jotech.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl font-semibold text-[var(--sea-ink)] py-2 border-b border-[var(--line-subtle)] flex items-center justify-between"
+            >
+              <span>Jobi S S (Founder)</span>
+              <span className="text-sm opacity-60">↗</span>
+            </a>
+          </div>
+
+          <div className="pt-8 pb-4">
+            <Link
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full flex items-center justify-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 py-3.5 text-sm font-bold text-white shadow-lg shadow-indigo-600/20 transition"
+            >
+              <span>Build with me</span>
+              <span>→</span>
+            </Link>
+            <p className="mt-4 text-center mono-meta text-[var(--sea-ink-muted)]">
+              Independent Software Ecosystem
+            </p>
+          </div>
+        </div>
+      )}
     </header>
   )
 }

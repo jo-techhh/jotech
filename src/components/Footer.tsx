@@ -1,70 +1,64 @@
 import Logo from './Logo'
 
 export default function Footer() {
-  const year = new Date().getFullYear()
-
   return (
-    <footer className="mt-24 border-t border-[var(--line)] px-4 pb-12 pt-12 text-[var(--sea-ink-soft)]">
+    <footer className="mt-28 border-t border-[var(--line)] bg-[var(--bg-subtle)]/60 px-4 pb-14 pt-16 text-[var(--sea-ink-soft)]">
       <div className="page-wrap">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 pb-10 border-b border-[var(--line)]">
-          <div className="sm:col-span-1">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-5 pb-12 border-b border-[var(--line)]">
+          {/* Brand Info */}
+          <div className="md:col-span-2">
             <div className="mb-3">
               <Logo size="md" showText={true} />
             </div>
-            <p className="max-w-md text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-3">
-              Independent software ecosystem engineering resilient applications,
-              cloud tools, and modern digital products.
+            <p className="max-w-sm text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-4">
+              Independent software. Practical engineering.
             </p>
-            <a
-              href="https://jobiss.jotech.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[var(--lagoon-deep)] hover:underline"
-            >
-              Built by Jobi S S ↗
-            </a>
+            <p className="max-w-sm text-xs text-[var(--sea-ink-muted)] leading-relaxed">
+              JoTech is an independent software ecosystem engineered and maintained by Jobi S S. Focus on real products, system reliability, and practical AI applications.
+            </p>
           </div>
 
+          {/* Column 1: Products */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--sea-ink)] mb-3">
+            <h3 className="mono-meta text-[var(--sea-ink)] mb-3.5 font-semibold">
               Products
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-xs">
               <li>
                 <a
-                  href="https://weekly-zen-planner.jotech.in"
+                  href="https://weekly-planner.jotech.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[var(--sea-ink)] transition flex items-center justify-between"
+                  className="hover:text-[var(--sea-ink)] transition-colors inline-flex items-center gap-1 group"
                 >
                   <span>Weekly Planner</span>
-                  <span className="text-[0.65rem] text-[var(--sea-ink-soft)] opacity-80">
+                  <span className="text-[0.65rem] opacity-50 group-hover:opacity-100 transition-opacity">
                     ↗
                   </span>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://pocket-flow.jotech.in"
+                  href="https://pocket-flow.jotech.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[var(--sea-ink)] transition flex items-center justify-between"
+                  className="hover:text-[var(--sea-ink)] transition-colors inline-flex items-center gap-1 group"
                 >
                   <span>PocketFlow</span>
-                  <span className="text-[0.65rem] text-[var(--sea-ink-soft)] opacity-80">
+                  <span className="text-[0.65rem] opacity-50 group-hover:opacity-100 transition-opacity">
                     ↗
                   </span>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://blog.jotech.in"
+                  href="https://blog.jotech.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[var(--sea-ink)] transition flex items-center justify-between"
+                  className="hover:text-[var(--sea-ink)] transition-colors inline-flex items-center gap-1 group"
                 >
-                  <span>Jotech Blog</span>
-                  <span className="text-[0.65rem] text-[var(--sea-ink-soft)] opacity-80">
+                  <span>JoTech Blog</span>
+                  <span className="text-[0.65rem] opacity-50 group-hover:opacity-100 transition-opacity">
                     ↗
                   </span>
                 </a>
@@ -72,89 +66,117 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Column 2: Engineering */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--sea-ink)] mb-3">
-              Navigation
+            <h3 className="mono-meta text-[var(--sea-ink)] mb-3.5 font-semibold">
+              Engineering
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-xs text-[var(--sea-ink-soft)]">
               <li>
-                <a href="/" className="hover:text-[var(--sea-ink)] transition">
-                  Home
+                <a href="/#engineering" className="hover:text-[var(--sea-ink)] transition-colors">
+                  Backend Systems
                 </a>
               </li>
               <li>
-                <a
-                  href="/#products"
-                  className="hover:text-[var(--sea-ink)] transition"
-                >
-                  Featured Products
+                <a href="/#engineering" className="hover:text-[var(--sea-ink)] transition-colors">
+                  AI & Automation
                 </a>
               </li>
               <li>
-                <a
-                  href="/services"
-                  className="hover:text-[var(--sea-ink)] transition"
-                >
-                  Services
+                <a href="/#engineering" className="hover:text-[var(--sea-ink)] transition-colors">
+                  Cloud & Infrastructure
                 </a>
               </li>
               <li>
-                <a
-                  href="/about"
-                  className="hover:text-[var(--sea-ink)] transition"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/contact"
-                  className="hover:text-[var(--sea-ink)] transition"
-                >
-                  Contact
+                <a href="/#engineering" className="hover:text-[var(--sea-ink)] transition-colors">
+                  System Architecture
                 </a>
               </li>
             </ul>
           </div>
 
+          {/* Column 3: Founder & Connect */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-[var(--sea-ink)] mb-3">
-              Capabilities
+            <h3 className="mono-meta text-[var(--sea-ink)] mb-3.5 font-semibold">
+              Founder & Connect
             </h3>
-            <ul className="space-y-2 text-sm">
-              <li className="text-[var(--sea-ink-soft)]">
-                Backend (Python, Node, Go)
+            <ul className="space-y-2.5 text-xs">
+              <li>
+                <a
+                  href="https://jobiss.jotech.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--sea-ink)] transition-colors inline-flex items-center gap-1 group text-[var(--sea-ink)] font-medium"
+                >
+                  <span>Jobi S S</span>
+                  <span className="text-[0.65rem] opacity-50 group-hover:opacity-100 transition-opacity">
+                    ↗
+                  </span>
+                </a>
               </li>
-              <li className="text-[var(--sea-ink-soft)]">
-                Frontend (Angular & React)
+              <li>
+                <a
+                  href="https://github.com/jobiss"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--sea-ink)] transition-colors inline-flex items-center gap-1 group"
+                >
+                  <span>GitHub</span>
+                  <span className="text-[0.65rem] opacity-50 group-hover:opacity-100 transition-opacity">
+                    ↗
+                  </span>
+                </a>
               </li>
-              <li className="text-[var(--sea-ink-soft)]">
-                AI Solutions & MCP ChatBots
+              <li>
+                <a
+                  href="https://linkedin.com/in/jobiss"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--sea-ink)] transition-colors inline-flex items-center gap-1 group"
+                >
+                  <span>LinkedIn</span>
+                  <span className="text-[0.65rem] opacity-50 group-hover:opacity-100 transition-opacity">
+                    ↗
+                  </span>
+                </a>
               </li>
-              <li className="text-[var(--sea-ink-soft)]">
-                Cloud (AWS, GCloud, Contabo)
+              <li>
+                <a
+                  href="mailto:contact@jotech.in"
+                  className="hover:text-[var(--sea-ink)] transition-colors inline-flex items-center gap-1 group"
+                >
+                  <span>Email</span>
+                  <span className="text-[0.65rem] opacity-50 group-hover:opacity-100 transition-opacity">
+                    ↗
+                  </span>
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 pt-6 text-xs sm:flex-row">
+        {/* Bottom Bar */}
+        <div className="flex flex-col items-center justify-between gap-4 pt-8 text-xs sm:flex-row text-[var(--sea-ink-muted)]">
           <p className="m-0">
-            &copy; {year} JoTech. Built & maintained by{' '}
+            &copy; 2026 JoTech. Built independently by{' '}
             <a
-              href="https://jobiss.jotech.in"
+              href="https://jobiss.jotech.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-[var(--sea-ink)] hover:underline"
+              className="font-medium text-[var(--sea-ink)] hover:text-indigo-400 transition-colors"
             >
               Jobi S S
             </a>
             .
           </p>
-          <div className="flex items-center gap-4">
-            <span className="inline-flex items-center gap-1.5 text-[var(--lagoon-deep)] font-medium">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-              Systems Operational
+
+          <div className="flex items-center gap-2">
+            <span className="status-beacon">
+              <span className="status-beacon-ping" />
+              <span className="status-beacon-dot" />
+            </span>
+            <span className="text-xs font-mono text-[var(--sea-ink-soft)]">
+              All systems operational
             </span>
           </div>
         </div>

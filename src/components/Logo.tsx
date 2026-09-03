@@ -8,17 +8,16 @@ interface LogoProps {
 }
 
 const SIZES = {
-  xs: { icon: 20, text: 'text-sm', sub: 'text-[0.55rem]', gap: 'gap-1.5' },
-  sm: { icon: 24, text: 'text-base', sub: 'text-[0.6rem]', gap: 'gap-2' },
-  md: { icon: 32, text: 'text-lg', sub: 'text-[0.65rem]', gap: 'gap-2.5' },
-  lg: { icon: 42, text: 'text-2xl', sub: 'text-[0.75rem]', gap: 'gap-3' },
-  xl: { icon: 56, text: 'text-3xl', sub: 'text-[0.85rem]', gap: 'gap-3.5' },
+  xs: { icon: 18, text: 'text-sm tracking-tight', gap: 'gap-1.5' },
+  sm: { icon: 22, text: 'text-[0.95rem] tracking-tight', gap: 'gap-2' },
+  md: { icon: 26, text: 'text-base tracking-tight', gap: 'gap-2.5' },
+  lg: { icon: 34, text: 'text-xl tracking-tight', gap: 'gap-3' },
+  xl: { icon: 44, text: 'text-2xl tracking-tight', gap: 'gap-3.5' },
 }
 
 /**
- * Modern JoTech Logo Component
- * Incorporates the geometric J+T fusion monogram emblem,
- * radiant tech gradients, and sleek typography.
+ * Minimal, Premium JoTech Wordmark & Monogram
+ * Engineered with precision geometric lines and crisp Antigravity aesthetics.
  */
 export const Logo: FC<LogoProps> = ({
   size = 'md',
@@ -33,115 +32,73 @@ export const Logo: FC<LogoProps> = ({
       className={`inline-flex items-center select-none ${config.gap} ${className}`}
       aria-label="JoTech"
     >
-      {/* JoTech Monogram Emblem SVG */}
+      {/* Precision Geometric Monogram Emblem */}
       <div
-        className="relative flex-shrink-0 transition-transform duration-300 group-hover:scale-105"
+        className="relative flex-shrink-0 transition-transform duration-200 group-hover:scale-105"
         style={{ width: config.icon, height: config.icon }}
       >
         <svg
-          viewBox="0 0 128 128"
+          viewBox="0 0 100 100"
           width="100%"
           height="100%"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="overflow-visible drop-shadow-xs"
+          className="overflow-visible"
         >
           <defs>
-            {/* Background Gradient */}
-            <linearGradient id="logo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#0b1329" />
-              <stop offset="100%" stopColor="#030712" />
+            <linearGradient id="jt-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#818CF8" />
+              <stop offset="100%" stopColor="#4F46E5" />
             </linearGradient>
-
-            {/* Glowing Border Gradient */}
-            <linearGradient id="logo-border" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.9" />
-              <stop offset="50%" stopColor="#6366f1" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="#10b981" stopOpacity="0.85" />
+            <linearGradient id="jt-border" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgba(255,255,255,0.2)" />
+              <stop offset="100%" stopColor="rgba(255,255,255,0.05)" />
             </linearGradient>
-
-            {/* T-Bar Gradient */}
-            <linearGradient id="logo-tbar" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#38bdf8" />
-              <stop offset="50%" stopColor="#60a5fa" />
-              <stop offset="100%" stopColor="#818cf8" />
-            </linearGradient>
-
-            {/* J-Stem Gradient */}
-            <linearGradient id="logo-jstem" x1="50%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#60a5fa" />
-              <stop offset="35%" stopColor="#3b82f6" />
-              <stop offset="75%" stopColor="#06b6d4" />
-              <stop offset="100%" stopColor="#10b981" />
-            </linearGradient>
-
-            {/* Ambient Radial Glow */}
-            <radialGradient id="logo-ambient" cx="50%" cy="35%" r="45%">
-              <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.35" />
-              <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
-            </radialGradient>
           </defs>
 
-          {/* Squircle Badge Shell */}
+          {/* Precision Squircle Frame */}
           <rect
             x="4"
             y="4"
-            width="120"
-            height="120"
-            rx="28"
-            fill="url(#logo-bg)"
-          />
-          <rect
-            x="4"
-            y="4"
-            width="120"
-            height="120"
-            rx="28"
-            fill="none"
-            stroke="url(#logo-border)"
+            width="92"
+            height="92"
+            rx="24"
+            fill="#101216"
+            stroke="url(#jt-border)"
             strokeWidth="2.5"
           />
 
-          {/* Internal Glow Circle */}
-          <circle cx="64" cy="42" r="32" fill="url(#logo-ambient)" />
-
-          {/* T-Bar Horizontal Beam */}
+          {/* Minimalist J+T Interlocking Architecture */}
+          {/* Top T-beam */}
           <rect
-            x="28"
-            y="32"
-            width="72"
-            height="14"
-            rx="7"
-            fill="url(#logo-tbar)"
+            x="24"
+            y="26"
+            width="52"
+            height="10"
+            rx="5"
+            fill="url(#jt-grad)"
           />
-
-          {/* J-Stem Curved Path */}
+          {/* J-curve stem */}
           <path
-            d="M64 38 V74 C64 88 52 96 40 96 C29 96 24 86 24 76"
-            fill="none"
-            stroke="url(#logo-jstem)"
-            strokeWidth="14"
+            d="M50 30 V62 C50 72 42 78 32 78 C24 78 20 71 20 64"
+            stroke="#F5F5F7"
+            strokeWidth="10"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-
-          {/* Emerald Energy / Node Accent */}
-          <circle cx="92" cy="74" r="9" fill="#10b981" opacity="0.25" />
-          <circle cx="92" cy="74" r="5.5" fill="#10b981" />
-          <circle cx="92" cy="74" r="2.2" fill="#a7f3d0" />
+          {/* Precision Energy Beacon */}
+          <circle cx="72" cy="62" r="4.5" fill="#6366F1" />
         </svg>
       </div>
 
-      {/* Brand Typography */}
+      {/* Brand Wordmark */}
       {!iconOnly && showText && (
-        <div className="flex flex-col leading-none">
-          <span
-            className={`font-extrabold tracking-tight text-[var(--sea-ink)] ${config.text}`}
-          >
-            Jo
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent dark:from-blue-400 dark:via-indigo-300 dark:to-cyan-400">
-              Tech
-            </span>
+        <div className="flex items-center leading-none">
+          <span className={`font-bold text-[var(--sea-ink)] ${config.text}`}>
+            JoTech
+          </span>
+          <span className="ml-1.5 hidden sm:inline-block text-[0.62rem] font-mono font-medium text-[var(--sea-ink-muted)] tracking-wider uppercase border border-[var(--line)] rounded px-1 py-0.2">
+            ecosystem
           </span>
         </div>
       )}
