@@ -25,7 +25,7 @@ export const Logo: FC<LogoProps> = ({
   showText = true,
   className = '',
 }) => {
-  const config = SIZES[size] || SIZES.md
+  const config = SIZES[size]
 
   return (
     <div

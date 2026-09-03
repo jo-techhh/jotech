@@ -44,7 +44,9 @@ function ContactPage() {
           Have something worth building?
         </h1>
         <p className="text-base sm:text-lg text-[var(--sea-ink-soft)] leading-relaxed">
-          Tell me what you're trying to build. Let's figure out the architecture, scope and next step. No sales reps, no spam—you speak directly with <strong>Jobi S S</strong>.
+          Tell me what you're trying to build. Let's figure out the
+          architecture, scope and next step. No sales reps, no spam—you speak
+          directly with <strong>Jobi S S</strong>.
         </p>
       </section>
 
@@ -61,9 +63,9 @@ function ContactPage() {
                   Message Sent
                 </h3>
                 <p className="text-sm text-[var(--sea-ink-soft)] max-w-md mx-auto mb-6">
-                  Thanks <strong>{formData.name}</strong>. I've received your inquiry regarding{' '}
-                  <strong>{formData.focus}</strong> and will get back to you directly at{' '}
-                  <strong>{formData.email}</strong>.
+                  Thanks <strong>{formData.name}</strong>. I've received your
+                  inquiry regarding <strong>{formData.focus}</strong> and will
+                  get back to you directly at <strong>{formData.email}</strong>.
                 </p>
                 <button
                   type="button"
@@ -234,7 +236,8 @@ function ContactPage() {
             <span className="mono-meta text-emerald-400 mb-1 block">
               ● PROMPT RESPONSE
             </span>
-            Messages are reviewed directly by Jobi S S, typically within 24 business hours. No outsourced screening.
+            Messages are reviewed directly by Jobi S S, typically within 24
+            business hours. No outsourced screening.
           </div>
         </div>
       </div>

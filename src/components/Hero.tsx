@@ -11,7 +11,9 @@ export default function Hero() {
     if (!ctx) return
 
     // Check prefers-reduced-motion
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches
     if (prefersReducedMotion) return
 
     let animationFrameId: number
@@ -19,7 +21,7 @@ export default function Hero() {
     let height = (canvas.height = canvas.parentElement?.clientHeight || 500)
 
     const handleResize = () => {
-      if (!canvas || !canvas.parentElement) return
+      if (!canvas.parentElement) return
       width = canvas.width = canvas.parentElement.clientWidth
       height = canvas.height = canvas.parentElement.clientHeight
     }
@@ -137,7 +139,8 @@ export default function Hero() {
           >
             Jobi S S
           </a>{' '}
-          — building practical products, engineering reliable systems, exploring AI, and sharing what works.
+          — building practical products, engineering reliable systems, exploring
+          AI, and sharing what works.
         </p>
 
         {/* CTA Buttons */}
@@ -172,14 +175,18 @@ export default function Hero() {
               3 PRODUCTS
             </span>
           </div>
-          <span className="hidden sm:inline text-[var(--sea-ink-muted)] opacity-40">|</span>
+          <span className="hidden sm:inline text-[var(--sea-ink-muted)] opacity-40">
+            |
+          </span>
           <div className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
             <span className="tracking-wider uppercase font-semibold text-[var(--sea-ink)]">
               1 BUILDER
             </span>
           </div>
-          <span className="hidden sm:inline text-[var(--sea-ink-muted)] opacity-40">|</span>
+          <span className="hidden sm:inline text-[var(--sea-ink-muted)] opacity-40">
+            |
+          </span>
           <div className="flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
             <span className="tracking-wider uppercase font-semibold text-[var(--sea-ink)]">

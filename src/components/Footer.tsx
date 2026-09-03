@@ -14,7 +14,9 @@ export default function Footer() {
               Independent software. Practical engineering.
             </p>
             <p className="max-w-sm text-xs text-[var(--sea-ink-muted)] leading-relaxed">
-              JoTech is an independent software ecosystem engineered and maintained by Jobi S S. Focus on real products, system reliability, and practical AI applications.
+              JoTech is an independent software ecosystem engineered and
+              maintained by Jobi S S. Focus on real products, system
+              reliability, and practical AI applications.
             </p>
           </div>
 
@@ -73,22 +75,34 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5 text-xs text-[var(--sea-ink-soft)]">
               <li>
-                <a href="/#engineering" className="hover:text-[var(--sea-ink)] transition-colors">
+                <a
+                  href="/#engineering"
+                  className="hover:text-[var(--sea-ink)] transition-colors"
+                >
                   Backend Systems
                 </a>
               </li>
               <li>
-                <a href="/#engineering" className="hover:text-[var(--sea-ink)] transition-colors">
+                <a
+                  href="/#engineering"
+                  className="hover:text-[var(--sea-ink)] transition-colors"
+                >
                   AI & Automation
                 </a>
               </li>
               <li>
-                <a href="/#engineering" className="hover:text-[var(--sea-ink)] transition-colors">
+                <a
+                  href="/#engineering"
+                  className="hover:text-[var(--sea-ink)] transition-colors"
+                >
                   Cloud & Infrastructure
                 </a>
               </li>
               <li>
-                <a href="/#engineering" className="hover:text-[var(--sea-ink)] transition-colors">
+                <a
+                  href="/#engineering"
+                  className="hover:text-[var(--sea-ink)] transition-colors"
+                >
                   System Architecture
                 </a>
               </li>

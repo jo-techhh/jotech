@@ -10,7 +10,8 @@ interface NoteItem {
 const NOTES: NoteItem[] = [
   {
     category: 'SYSTEM DESIGN',
-    title: 'Designing Low-Latency Event-Driven Microservices with TanStack Start & Nitro',
+    title:
+      'Designing Low-Latency Event-Driven Microservices with TanStack Start & Nitro',
     desc: 'Exploring real-world distributed architectures, idempotent event processing patterns, and resilient pipelines for horizontal scaling.',
     readTime: '6 min read',
     date: 'Aug 2026',
@@ -18,7 +19,8 @@ const NOTES: NoteItem[] = [
   },
   {
     category: 'AI ENGINEERING',
-    title: 'Building Context-Aware MCP Servers with Python, FastAPI, and Structured Tools',
+    title:
+      'Building Context-Aware MCP Servers with Python, FastAPI, and Structured Tools',
     desc: 'How to implement the Model Context Protocol (MCP) to safely expose private databases, execution runtimes, and local APIs to LLM agents.',
     readTime: '8 min read',
     date: 'Jul 2026',
@@ -26,7 +28,8 @@ const NOTES: NoteItem[] = [
   },
   {
     category: 'BACKEND',
-    title: 'Pragmatic PostgreSQL Query Optimization & Indexing Strategies Under Load',
+    title:
+      'Pragmatic PostgreSQL Query Optimization & Indexing Strategies Under Load',
     desc: 'Tactical lessons on analyzing execution plans, composite B-Tree indexes, connection pooling with PgBouncer, and eliminating latency spikes.',
     readTime: '5 min read',
     date: 'Jun 2026',
@@ -48,7 +51,8 @@ export default function EngineeringNotes() {
               From the engineering desk
             </h2>
             <p className="mt-3 text-base text-[var(--sea-ink-soft)] leading-relaxed">
-              Things learned while building real systems. Deep dives into backend engineering, system design, and AI automation.
+              Things learned while building real systems. Deep dives into
+              backend engineering, system design, and AI automation.
             </p>
           </div>
 
@@ -94,7 +98,9 @@ export default function EngineeringNotes() {
 
               <div className="pt-3 border-t border-[var(--line-subtle)] flex items-center justify-between text-xs text-[var(--sea-ink-muted)]">
                 <span className="font-mono text-[0.68rem]">{note.date}</span>
-                <span className="cta-arrow text-indigo-400 font-semibold text-sm">→</span>
+                <span className="cta-arrow text-indigo-400 font-semibold text-sm">
+                  →
+                </span>
               </div>
             </a>
           ))}

@@ -32,7 +32,8 @@ const ITEMS: BuildingItem[] = [
     name: 'New Experiments',
     category: 'Autonomous AI & Agents',
     status: 'EXPLORING',
-    activity: 'Local LLM tool orchestration, MCP agents, and automated test runners',
+    activity:
+      'Local LLM tool orchestration, MCP agents, and automated test runners',
     version: 'Lab phase',
   },
 ]
@@ -55,7 +56,8 @@ export default function CurrentlyBuilding() {
                 </h3>
               </div>
               <p className="text-xs text-[var(--sea-ink-soft)]">
-                JoTech is always evolving. Continuous engineering iterations and live deployments.
+                JoTech is always evolving. Continuous engineering iterations and
+                live deployments.
               </p>
             </div>
 

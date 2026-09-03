@@ -19,7 +19,8 @@ export default function FeaturedProducts() {
               Built by JoTech
             </h2>
             <p className="mt-3 text-base text-[var(--sea-ink-soft)] leading-relaxed">
-              Real products. Built, deployed and continuously improved by an independent engineer.
+              Real products. Built, deployed and continuously improved by an
+              independent engineer.
             </p>
           </div>
 
@@ -38,9 +39,7 @@ export default function FeaturedProducts() {
             <div>
               {/* Card Meta Bar */}
               <div className="flex items-center justify-between gap-2 mb-4">
-                <span className="mono-meta text-indigo-400">
-                  PRODUCTIVITY
-                </span>
+                <span className="mono-meta text-indigo-400">PRODUCTIVITY</span>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--chip-bg)] px-2.5 py-0.5 text-[0.68rem] font-mono text-[var(--sea-ink)]">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                   ACTIVE
@@ -52,7 +51,8 @@ export default function FeaturedProducts() {
                 Weekly Planner
               </h3>
               <p className="text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-6">
-                Plan your week, organize priorities and focus on what actually matters without cognitive clutter.
+                Plan your week, organize priorities and focus on what actually
+                matters without cognitive clutter.
               </p>
             </div>
 
@@ -64,9 +64,13 @@ export default function FeaturedProducts() {
                   <span className="h-2 w-2 rounded-full bg-white/20" />
                   <span className="h-2 w-2 rounded-full bg-white/20" />
                   <span className="h-2 w-2 rounded-full bg-white/20" />
-                  <span className="ml-2 text-[var(--sea-ink-soft)]">weekly-planner.jotech.in</span>
+                  <span className="ml-2 text-[var(--sea-ink-soft)]">
+                    weekly-planner.jotech.in
+                  </span>
                 </div>
-                <span className="text-indigo-400 font-semibold">Week 36 · Focused</span>
+                <span className="text-indigo-400 font-semibold">
+                  Week 36 · Focused
+                </span>
               </div>
 
               {/* 7-Day Matrix Strip */}
@@ -88,8 +92,12 @@ export default function FeaturedProducts() {
                         : 'border border-[var(--line-subtle)] bg-[var(--surface)] text-[var(--sea-ink-soft)]'
                     }`}
                   >
-                    <span className="block text-[0.62rem] opacity-70">{col.d}</span>
-                    <span className="block font-mono text-[0.72rem]">{col.dt}</span>
+                    <span className="block text-[0.62rem] opacity-70">
+                      {col.d}
+                    </span>
+                    <span className="block font-mono text-[0.72rem]">
+                      {col.dt}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -101,17 +109,25 @@ export default function FeaturedProducts() {
                     <span className="h-3.5 w-3.5 rounded border border-indigo-400/80 bg-indigo-500/20 flex items-center justify-center text-[0.6rem] text-indigo-300">
                       ✓
                     </span>
-                    <span className="text-[var(--sea-ink)] font-medium">Architecture spec & event schema</span>
+                    <span className="text-[var(--sea-ink)] font-medium">
+                      Architecture spec & event schema
+                    </span>
                   </div>
-                  <span className="mono-meta text-[0.6rem] text-indigo-400">High Priority</span>
+                  <span className="mono-meta text-[0.6rem] text-indigo-400">
+                    High Priority
+                  </span>
                 </div>
 
                 <div className="flex items-center justify-between rounded-lg border border-[var(--line-subtle)] bg-[var(--surface)] px-3 py-2 text-xs">
                   <div className="flex items-center gap-2">
                     <span className="h-3.5 w-3.5 rounded border border-[var(--line-strong)]" />
-                    <span className="text-[var(--sea-ink-soft)]">PostgreSQL query index benchmarking</span>
+                    <span className="text-[var(--sea-ink-soft)]">
+                      PostgreSQL query index benchmarking
+                    </span>
                   </div>
-                  <span className="mono-meta text-[0.6rem] text-[var(--sea-ink-muted)]">Deep Work</span>
+                  <span className="mono-meta text-[0.6rem] text-[var(--sea-ink-muted)]">
+                    Deep Work
+                  </span>
                 </div>
               </div>
             </div>
@@ -151,7 +167,8 @@ export default function FeaturedProducts() {
                 PocketFlow
               </h3>
               <p className="text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-6">
-                Understand your money, track transactions and stay in control of your financial flow.
+                Understand your money, track transactions and stay in control of
+                your financial flow.
               </p>
             </div>
 
@@ -163,9 +180,13 @@ export default function FeaturedProducts() {
                   <span className="h-2 w-2 rounded-full bg-white/20" />
                   <span className="h-2 w-2 rounded-full bg-white/20" />
                   <span className="h-2 w-2 rounded-full bg-white/20" />
-                  <span className="ml-2 text-[var(--sea-ink-soft)]">pocket-flow.jotech.in</span>
+                  <span className="ml-2 text-[var(--sea-ink-soft)]">
+                    pocket-flow.jotech.in
+                  </span>
                 </div>
-                <span className="text-emerald-400 font-semibold">Net Cashflow</span>
+                <span className="text-emerald-400 font-semibold">
+                  Net Cashflow
+                </span>
               </div>
 
               {/* Metrics Row */}
@@ -202,10 +223,22 @@ export default function FeaturedProducts() {
                   <span className="text-indigo-300">Disciplined Buffer</span>
                 </div>
                 <div className="flex h-2 w-full overflow-hidden rounded-full gap-0.5">
-                  <div className="h-full bg-indigo-500" style={{ width: '45%' }} />
-                  <div className="h-full bg-emerald-500" style={{ width: '30%' }} />
-                  <div className="h-full bg-cyan-500" style={{ width: '15%' }} />
-                  <div className="h-full bg-violet-500" style={{ width: '10%' }} />
+                  <div
+                    className="h-full bg-indigo-500"
+                    style={{ width: '45%' }}
+                  />
+                  <div
+                    className="h-full bg-emerald-500"
+                    style={{ width: '30%' }}
+                  />
+                  <div
+                    className="h-full bg-cyan-500"
+                    style={{ width: '15%' }}
+                  />
+                  <div
+                    className="h-full bg-violet-500"
+                    style={{ width: '10%' }}
+                  />
                 </div>
               </div>
             </div>
@@ -233,9 +266,7 @@ export default function FeaturedProducts() {
             {/* Left Content */}
             <div className="lg:col-span-6">
               <div className="flex items-center justify-between gap-2 mb-4">
-                <span className="mono-meta text-indigo-400">
-                  ENGINEERING
-                </span>
+                <span className="mono-meta text-indigo-400">ENGINEERING</span>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--chip-bg)] px-2.5 py-0.5 text-[0.68rem] font-mono text-[var(--sea-ink)]">
                   <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
                   CONTINUOUSLY DEVELOPED
@@ -246,7 +277,8 @@ export default function FeaturedProducts() {
                 JoTech Blog
               </h3>
               <p className="text-sm sm:text-base text-[var(--sea-ink-soft)] leading-relaxed mb-6">
-                Practical notes on software architecture, backend engineering, AI and things being built at JoTech.
+                Practical notes on software architecture, backend engineering,
+                AI and things being built at JoTech.
               </p>
 
               <div className="pt-2">
@@ -271,7 +303,9 @@ export default function FeaturedProducts() {
                     <span className="h-2 w-2 rounded-full bg-white/20" />
                     <span className="h-2 w-2 rounded-full bg-white/20" />
                     <span className="h-2 w-2 rounded-full bg-white/20" />
-                    <span className="ml-2 text-[var(--sea-ink-soft)]">blog.jotech.in/system-design</span>
+                    <span className="ml-2 text-[var(--sea-ink-soft)]">
+                      blog.jotech.in/system-design
+                    </span>
                   </div>
                   <span className="text-indigo-400">Article Snapshot</span>
                 </div>
@@ -284,10 +318,12 @@ export default function FeaturedProducts() {
                     <span>5 MIN READ</span>
                   </div>
                   <h4 className="text-sm font-bold text-[var(--sea-ink)] leading-snug">
-                    Designing Low-Latency Event Streams with TanStack Start & Nitro
+                    Designing Low-Latency Event Streams with TanStack Start &
+                    Nitro
                   </h4>
                   <p className="text-xs text-[var(--sea-ink-soft)] mt-1 line-clamp-2">
-                    Pragmatic patterns for idempotent event processing, distributed caching, and sub-100ms API response times.
+                    Pragmatic patterns for idempotent event processing,
+                    distributed caching, and sub-100ms API response times.
                   </p>
                 </div>
 
@@ -299,13 +335,26 @@ export default function FeaturedProducts() {
                   </div>
                   <pre className="overflow-x-auto m-0">
                     <code>
-                      <span className="text-indigo-400">export async function</span>{' '}
-                      <span className="text-slate-200 font-semibold">handleProductEvent</span>(
-                      <span className="text-slate-400">event:</span>{' '}
-                      <span className="text-indigo-300">SystemEvent</span>
-                      ) &#123;{'\n'}
-                      {'  '}<span className="text-indigo-400">const</span> &#123; traceId &#125; = <span className="text-indigo-400">await</span> event.<span className="text-slate-200">validate</span>();{'\n'}
-                      {'  '}<span className="text-indigo-400">return</span> <span className="text-emerald-400">`OK: $&#123;traceId&#125;`</span>;{'\n'}
+                      <span className="text-indigo-400">
+                        export async function
+                      </span>{' '}
+                      <span className="text-slate-200 font-semibold">
+                        handleProductEvent
+                      </span>
+                      (<span className="text-slate-400">event:</span>{' '}
+                      <span className="text-indigo-300">SystemEvent</span>)
+                      &#123;{'\n'}
+                      {'  '}
+                      <span className="text-indigo-400">const</span> &#123;
+                      traceId &#125; ={' '}
+                      <span className="text-indigo-400">await</span> event.
+                      <span className="text-slate-200">validate</span>();{'\n'}
+                      {'  '}
+                      <span className="text-indigo-400">return</span>{' '}
+                      <span className="text-emerald-400">
+                        `OK: $&#123;traceId&#125;`
+                      </span>
+                      ;{'\n'}
                       &#125;
                     </code>
                   </pre>

@@ -9,7 +9,13 @@ const CAPABILITIES = [
     number: '02',
     title: 'AI & Automation',
     desc: 'AI applications, autonomous agents, LLM integrations, MCP (Model Context Protocol), intelligent workflows and end-to-end automation pipelines.',
-    techs: ['MCP Protocol', 'Autonomous Agents', 'LLM Tooling', 'RAG', 'Vector Search'],
+    techs: [
+      'MCP Protocol',
+      'Autonomous Agents',
+      'LLM Tooling',
+      'RAG',
+      'Vector Search',
+    ],
   },
   {
     number: '03',
@@ -21,24 +27,31 @@ const CAPABILITIES = [
     number: '04',
     title: 'System Architecture',
     desc: 'Architecture design, latency and performance optimization, security hardening, reliability benchmarks and scalable application design.',
-    techs: ['Performance Profiling', 'Database Indexing', 'Modular Contracts', 'API Design'],
+    techs: [
+      'Performance Profiling',
+      'Database Indexing',
+      'Modular Contracts',
+      'API Design',
+    ],
   },
 ]
 
 export default function Capabilities() {
   return (
-    <section id="engineering" className="py-16 sm:py-24 border-t border-[var(--line-subtle)] scroll-mt-20">
+    <section
+      id="engineering"
+      className="py-16 sm:py-24 border-t border-[var(--line-subtle)] scroll-mt-20"
+    >
       <div className="page-wrap">
         {/* Header */}
         <div className="max-w-2xl mb-12">
-          <p className="mono-meta text-indigo-400 mb-2">
-            Engineering Scope
-          </p>
+          <p className="mono-meta text-indigo-400 mb-2">Engineering Scope</p>
           <h2 className="display-title text-3xl sm:text-5xl font-extrabold tracking-tight text-[var(--sea-ink)] mb-4">
             What I build
           </h2>
           <p className="text-base text-[var(--sea-ink-soft)] leading-relaxed">
-            Direct, specialized capabilities focused on system resilience, modern AI integrations, and high-performance backends.
+            Direct, specialized capabilities focused on system resilience,
+            modern AI integrations, and high-performance backends.
           </p>
         </div>
 

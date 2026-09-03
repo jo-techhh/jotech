@@ -22,7 +22,8 @@ function ServicesPage() {
       id: 'backend',
       number: '01',
       title: 'Backend Systems & Distributed APIs',
-      tagline: 'High-speed, type-safe backends built with Python, FastAPI, and PostgreSQL.',
+      tagline:
+        'High-speed, type-safe backends built with Python, FastAPI, and PostgreSQL.',
       features: [
         'Robust REST & streaming APIs engineered with Python (FastAPI, Django, Flask)',
         'Scalable TypeScript / Node.js microservices with Express and ElysiaJS',
@@ -42,7 +43,8 @@ function ServicesPage() {
       id: 'ai',
       number: '02',
       title: 'AI & MCP Agent Integrations',
-      tagline: 'Custom Model Context Protocol (MCP) integrations, intelligent workflows and tools.',
+      tagline:
+        'Custom Model Context Protocol (MCP) integrations, intelligent workflows and tools.',
       features: [
         'Model Context Protocol (MCP) server & client architectures connecting LLMs to private business data',
         'Autonomous agent toolchains, schema enforcement, and validation guardrails',
@@ -61,7 +63,8 @@ function ServicesPage() {
       id: 'cloud',
       number: '03',
       title: 'Cloud Infrastructure & Deployments',
-      tagline: 'Cost-effective, reliable infrastructure engineered across AWS, Google Cloud, and VPS hosting.',
+      tagline:
+        'Cost-effective, reliable infrastructure engineered across AWS, Google Cloud, and VPS hosting.',
       features: [
         'Amazon Web Services (AWS) deployment: EC2, ECS, Lambda, S3, RDS, and CloudFront CDN',
         'Google Cloud (GCloud) infrastructure: Cloud Run, Compute Engine, and secure IAM policies',
@@ -80,7 +83,8 @@ function ServicesPage() {
       id: 'architecture',
       number: '04',
       title: 'System Architecture & Performance Profiling',
-      tagline: 'Pragmatic technical reviews, latency reduction, and architectural modernization.',
+      tagline:
+        'Pragmatic technical reviews, latency reduction, and architectural modernization.',
       features: [
         'Codebase audits identifying performance bottlenecks, security vulnerabilities, and tech debt',
         'PostgreSQL indexing strategies and memory optimization for heavy workloads',
@@ -108,7 +112,9 @@ function ServicesPage() {
           What I build and engineer.
         </h1>
         <p className="text-base sm:text-lg text-[var(--sea-ink-soft)] leading-relaxed">
-          No layers of account managers or outsourced junior teams. You work directly with founder and systems engineer <strong>Jobi S S</strong> to scope, architect, and ship high-performance software.
+          No layers of account managers or outsourced junior teams. You work
+          directly with founder and systems engineer <strong>Jobi S S</strong>{' '}
+          to scope, architect, and ship high-performance software.
         </p>
       </section>
 
@@ -144,7 +150,9 @@ function ServicesPage() {
                 <ul className="space-y-2.5 text-xs sm:text-sm text-[var(--sea-ink-soft)]">
                   {cap.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5">
-                      <span className="text-indigo-400 font-bold mt-0.5">›</span>
+                      <span className="text-indigo-400 font-bold mt-0.5">
+                        ›
+                      </span>
                       <span>{f}</span>
                     </li>
                   ))}

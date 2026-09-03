@@ -26,7 +26,8 @@ export default function FinalCTA() {
             </h2>
 
             <p className="text-base sm:text-lg text-[var(--sea-ink-soft)] leading-relaxed mb-8 max-w-xl mx-auto">
-              Tell me what you're trying to build. Let's figure out the architecture, scope and next step.
+              Tell me what you're trying to build. Let's figure out the
+              architecture, scope and next step.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -49,7 +50,8 @@ export default function FinalCTA() {
             </div>
 
             <p className="mono-meta text-[0.68rem] text-[var(--sea-ink-muted)] mt-8">
-              Direct founder access · Zero agency bureaucracy · Architecture first
+              Direct founder access · Zero agency bureaucracy · Architecture
+              first
             </p>
           </div>
         </div>

@@ -1,6 +1,9 @@
 export default function Founder() {
   return (
-    <section id="founder" className="py-16 sm:py-24 border-t border-[var(--line-subtle)] scroll-mt-20">
+    <section
+      id="founder"
+      className="py-16 sm:py-24 border-t border-[var(--line-subtle)] scroll-mt-20"
+    >
       <div className="page-wrap">
         <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface-glass)] p-8 sm:p-12 lg:p-16 backdrop-blur-xl shadow-sm relative overflow-hidden">
           {/* Subtle background ambient glow */}
@@ -23,10 +26,15 @@ export default function Founder() {
 
               <div className="space-y-4 text-sm sm:text-base text-[var(--sea-ink-soft)] leading-relaxed max-w-2xl">
                 <p>
-                  JoTech is independently designed, engineered, deployed and maintained by Jobi S S.
+                  JoTech is independently designed, engineered, deployed and
+                  maintained by Jobi S S.
                 </p>
                 <p>
-                  From backend systems and cloud infrastructure to AI-powered applications, JoTech is a place to turn ideas into useful software. No bloated management hierarchies, no fabricated agency case studies — just pure engineering craft, high ownership, and software shipped to production.
+                  From backend systems and cloud infrastructure to AI-powered
+                  applications, JoTech is a place to turn ideas into useful
+                  software. No bloated management hierarchies, no fabricated
+                  agency case studies — just pure engineering craft, high
+                  ownership, and software shipped to production.
                 </p>
               </div>
 
@@ -82,16 +90,28 @@ export default function Founder() {
 
                 <div className="mt-4 pt-4 border-t border-[var(--line-subtle)] space-y-2 text-left">
                   <div className="flex justify-between text-xs">
-                    <span className="text-[var(--sea-ink-muted)]">Position:</span>
-                    <span className="font-mono text-[var(--sea-ink)]">Independent Founder</span>
+                    <span className="text-[var(--sea-ink-muted)]">
+                      Position:
+                    </span>
+                    <span className="font-mono text-[var(--sea-ink)]">
+                      Independent Founder
+                    </span>
                   </div>
                   <div className="flex justify-between text-xs">
-                    <span className="text-[var(--sea-ink-muted)]">Core Focus:</span>
-                    <span className="font-mono text-[var(--sea-ink)]">AI + Systems + Cloud</span>
+                    <span className="text-[var(--sea-ink-muted)]">
+                      Core Focus:
+                    </span>
+                    <span className="font-mono text-[var(--sea-ink)]">
+                      AI + Systems + Cloud
+                    </span>
                   </div>
                   <div className="flex justify-between text-xs">
-                    <span className="text-[var(--sea-ink-muted)]">Ecosystem:</span>
-                    <span className="font-mono text-indigo-400">JoTech (India / Global)</span>
+                    <span className="text-[var(--sea-ink-muted)]">
+                      Ecosystem:
+                    </span>
+                    <span className="font-mono text-indigo-400">
+                      JoTech (India / Global)
+                    </span>
                   </div>
                 </div>
               </div>

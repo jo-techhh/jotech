@@ -52,7 +52,10 @@ function AboutPage() {
           Software built with craft, discipline, and purpose.
         </h1>
         <p className="text-base sm:text-lg text-[var(--sea-ink-soft)] leading-relaxed">
-          JoTech was created by <strong>Jobi S S</strong> to explore modern engineering, build practical products like Weekly Planner and PocketFlow, and share transparent technical lessons from production systems.
+          JoTech was created by <strong>Jobi S S</strong> to explore modern
+          engineering, build practical products like Weekly Planner and
+          PocketFlow, and share transparent technical lessons from production
+          systems.
         </p>
       </section>
 
@@ -66,10 +69,15 @@ function AboutPage() {
             Why JoTech exists
           </h2>
           <p className="text-xs sm:text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-4">
-            In an era where modern software is often bloated, slow, and buried beneath corporate committees, JoTech cuts through the noise. It is a personal digital workshop where ideas are rapidly prototyped, hardened, and deployed to production.
+            In an era where modern software is often bloated, slow, and buried
+            beneath corporate committees, JoTech cuts through the noise. It is a
+            personal digital workshop where ideas are rapidly prototyped,
+            hardened, and deployed to production.
           </p>
           <p className="text-xs sm:text-sm text-[var(--sea-ink-soft)] leading-relaxed">
-            Every product in the ecosystem is built to solve actual problems—whether that means organizing a busy week or monitoring financial flows without giving away your privacy.
+            Every product in the ecosystem is built to solve actual
+            problems—whether that means organizing a busy week or monitoring
+            financial flows without giving away your privacy.
           </p>
         </div>
 
@@ -81,10 +89,16 @@ function AboutPage() {
             Built on solid foundations
           </h2>
           <p className="text-xs sm:text-sm text-[var(--sea-ink-soft)] leading-relaxed mb-4">
-            The platform is built on modern primitives: <strong>TanStack Start</strong>, <strong>React 19</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>. Backends are powered by <strong>Python (FastAPI / Django)</strong>, <strong>PostgreSQL</strong>, and Dockerized cloud microservices.
+            The platform is built on modern primitives:{' '}
+            <strong>TanStack Start</strong>, <strong>React 19</strong>,{' '}
+            <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>.
+            Backends are powered by <strong>Python (FastAPI / Django)</strong>,{' '}
+            <strong>PostgreSQL</strong>, and Dockerized cloud microservices.
           </p>
           <p className="text-xs sm:text-sm text-[var(--sea-ink-soft)] leading-relaxed">
-            By leveraging isomorphic execution, file-based routing, and progressive hydration, applications achieve instantaneous page loads and predictable reliability.
+            By leveraging isomorphic execution, file-based routing, and
+            progressive hydration, applications achieve instantaneous page loads
+            and predictable reliability.
           </p>
         </div>
       </section>
@@ -124,7 +138,8 @@ function AboutPage() {
           Want to discuss architecture or collaborate?
         </h2>
         <p className="text-sm text-[var(--sea-ink-soft)] mb-6 max-w-md mx-auto">
-          Connect directly with founder Jobi S S to discuss systems engineering, AI integrations, or custom product builds.
+          Connect directly with founder Jobi S S to discuss systems engineering,
+          AI integrations, or custom product builds.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Link

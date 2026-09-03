@@ -18,7 +18,8 @@ const NODES: NodeData[] = [
     category: 'Productivity Application',
     status: 'ACTIVE',
     statusColor: 'bg-emerald-400',
-    description: 'Plan your week, organize priorities and focus on what actually matters without cognitive clutter.',
+    description:
+      'Plan your week, organize priorities and focus on what actually matters without cognitive clutter.',
     url: 'https://weekly-planner.jotech.in/',
   },
   {
@@ -27,7 +28,8 @@ const NODES: NodeData[] = [
     category: 'Personal Finance',
     status: 'ACTIVE',
     statusColor: 'bg-emerald-400',
-    description: 'Understand your money, track transactions and stay in control of your financial flow.',
+    description:
+      'Understand your money, track transactions and stay in control of your financial flow.',
     url: 'https://pocket-flow.jotech.in/',
   },
   {
@@ -36,7 +38,8 @@ const NODES: NodeData[] = [
     category: 'Engineering Publication',
     status: 'CONTINUOUSLY DEVELOPED',
     statusColor: 'bg-indigo-400',
-    description: 'Practical notes on software architecture, backend engineering, AI and things being built at JoTech.',
+    description:
+      'Practical notes on software architecture, backend engineering, AI and things being built at JoTech.',
     url: 'https://blog.jotech.in/',
   },
   {
@@ -45,7 +48,8 @@ const NODES: NodeData[] = [
     category: 'Founder & Builder',
     status: 'SOLO ARCHITECT',
     statusColor: 'bg-violet-400',
-    description: 'Independent systems engineer, cloud architect, and founder behind the entire JoTech ecosystem.',
+    description:
+      'Independent systems engineer, cloud architect, and founder behind the entire JoTech ecosystem.',
     url: 'https://jobiss.jotech.in/',
   },
 ]
@@ -54,7 +58,10 @@ export default function Ecosystem() {
   const [activeNode, setActiveNode] = useState<NodeData>(NODES[0])
 
   return (
-    <section id="ecosystem" className="py-16 sm:py-24 border-t border-[var(--line-subtle)] scroll-mt-20">
+    <section
+      id="ecosystem"
+      className="py-16 sm:py-24 border-t border-[var(--line-subtle)] scroll-mt-20"
+    >
       <div className="page-wrap">
         {/* Section Heading */}
         <div className="max-w-2xl mb-12">
@@ -67,7 +74,9 @@ export default function Ecosystem() {
             Multiple products.
           </h2>
           <p className="text-base text-[var(--sea-ink-soft)] leading-relaxed">
-            JoTech is where products, experiments, engineering systems and ideas come together. Every node is engineered with purpose, zero corporate overhead, and continuous refinement.
+            JoTech is where products, experiments, engineering systems and ideas
+            come together. Every node is engineered with purpose, zero corporate
+            overhead, and continuous refinement.
           </p>
         </div>
 
@@ -113,13 +122,17 @@ export default function Ecosystem() {
                       aria-label={`Inspect ${node.name}`}
                     >
                       <span className="flex items-center gap-1.5 mb-1.5">
-                        <span className={`h-1.5 w-1.5 rounded-full ${node.statusColor}`} />
+                        <span
+                          className={`h-1.5 w-1.5 rounded-full ${node.statusColor}`}
+                        />
                         <span className="mono-meta text-[0.6rem] text-[var(--sea-ink-muted)]">
                           {node.category.split(' ')[0]}
                         </span>
                       </span>
 
-                      <span className={`text-xs font-bold leading-snug ${isSelected ? 'text-white' : 'text-[var(--sea-ink)]'}`}>
+                      <span
+                        className={`text-xs font-bold leading-snug ${isSelected ? 'text-white' : 'text-[var(--sea-ink)]'}`}
+                      >
                         {node.name}
                       </span>
                     </button>
@@ -139,7 +152,9 @@ export default function Ecosystem() {
                   Telemetry Inspector
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--chip-bg)] px-2.5 py-0.5 text-[0.68rem] font-mono font-medium text-[var(--sea-ink)]">
-                  <span className={`h-1.5 w-1.5 rounded-full ${activeNode.statusColor}`} />
+                  <span
+                    className={`h-1.5 w-1.5 rounded-full ${activeNode.statusColor}`}
+                  />
                   {activeNode.status}
                 </span>
               </div>
@@ -163,7 +178,9 @@ export default function Ecosystem() {
                   className="inline-flex items-center gap-2 rounded-lg bg-[var(--surface-strong)] hover:bg-indigo-600 border border-[var(--line)] hover:border-indigo-500 px-4 py-2 text-xs font-semibold text-[var(--sea-ink)] hover:text-white transition-all duration-200 group"
                 >
                   <span>Open {activeNode.name}</span>
-                  <span className="cta-arrow text-indigo-400 group-hover:text-white">→</span>
+                  <span className="cta-arrow text-indigo-400 group-hover:text-white">
+                    →
+                  </span>
                 </a>
 
                 <span className="mono-meta text-[0.62rem] text-[var(--sea-ink-muted)]">

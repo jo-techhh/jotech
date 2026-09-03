@@ -5,8 +5,12 @@
 @custom-variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans:
+    'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
+  --font-mono:
+    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
 }
 
 /* Base Design Tokens — Dark-First Premium Antigravity System */
@@ -37,8 +41,13 @@
   --link-bg-hover: rgba(255, 255, 255, 0.06);
 
   --dot-color: rgba(255, 255, 255, 0.04);
-  --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 12px 32px -8px rgba(0, 0, 0, 0.7);
-  --glow-radial: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.14), transparent 65%);
+  --card-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.6), 0 12px 32px -8px rgba(0, 0, 0, 0.7);
+  --glow-radial: radial-gradient(
+    circle at 50% 0%,
+    rgba(99, 102, 241, 0.14),
+    transparent 65%
+  );
 }
 
 /* Optional Light theme override if user toggles */
@@ -69,8 +78,13 @@
   --link-bg-hover: #f3f4f6;
 
   --dot-color: rgba(0, 0, 0, 0.035);
-  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 10px 28px -4px rgba(0, 0, 0, 0.04);
-  --glow-radial: radial-gradient(circle at 50% 0%, rgba(79, 70, 229, 0.08), transparent 65%);
+  --card-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.05), 0 10px 28px -4px rgba(0, 0, 0, 0.04);
+  --glow-radial: radial-gradient(
+    circle at 50% 0%,
+    rgba(79, 70, 229, 0.08),
+    transparent 65%
+  );
 }
 
 * {
@@ -88,9 +102,17 @@ body {
   color: var(--sea-ink);
   font-family: var(--font-sans);
   background-color: var(--bg-base);
-  background-image: 
-    radial-gradient(1000px 600px at 50% -50px, rgba(99, 102, 241, 0.09), transparent 70%),
-    radial-gradient(800px 500px at 85% 20%, rgba(59, 130, 246, 0.04), transparent 60%);
+  background-image:
+    radial-gradient(
+      1000px 600px at 50% -50px,
+      rgba(99, 102, 241, 0.09),
+      transparent 70%
+    ),
+    radial-gradient(
+      800px 500px at 85% 20%,
+      rgba(59, 130, 246, 0.04),
+      transparent 60%
+    );
   background-attachment: fixed;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -99,7 +121,7 @@ body {
 
 /* Subtle Technical Grid Background */
 body::before {
-  content: "";
+  content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -193,7 +215,10 @@ pre code {
   border: 1px solid var(--line);
   background: var(--surface);
   box-shadow: var(--card-shadow);
-  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .feature-card:hover {
@@ -218,7 +243,9 @@ pre code {
 .product-card:hover {
   transform: translateY(-3px);
   border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(99, 102, 241, 0.25);
+  box-shadow:
+    0 20px 40px -15px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(99, 102, 241, 0.25);
 }
 
 .product-mockup-wrapper {
@@ -284,7 +311,8 @@ button:hover .cta-arrow {
 }
 
 @keyframes ping {
-  75%, 100% {
+  75%,
+  100% {
     transform: scale(2.2);
     opacity: 0;
   }
