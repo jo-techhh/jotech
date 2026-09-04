@@ -207,12 +207,12 @@ function ContactPage() {
                   PUBLIC REPOSITORIES
                 </span>
                 <a
-                  href="https://github.com/jobiss"
+                  href="https://github.com/jobissjo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono text-[var(--sea-ink)] hover:text-indigo-400 transition"
                 >
-                  github.com/jobiss ↗
+                  github.com/jobissjo ↗
                 </a>
               </div>
 
@@ -221,12 +221,12 @@ function ContactPage() {
                   PROFESSIONAL NETWORK
                 </span>
                 <a
-                  href="https://linkedin.com/in/jobiss"
+                  href="https://linkedin.com/in/jobiss12"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono text-[var(--sea-ink)] hover:text-indigo-400 transition"
                 >
-                  linkedin.com/in/jobiss ↗
+                  linkedin.com/in/jobiss12 ↗
                 </a>
               </div>
             </div>

@@ -52,7 +52,7 @@ export default function Founder() {
                 </a>
 
                 <a
-                  href="https://github.com/jobiss"
+                  href="https://github.com/jobissjo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-xl border border-indigo-200/60 dark:border-[var(--line)] bg-white/90 dark:bg-[var(--surface)] hover:bg-indigo-50/50 dark:hover:bg-[var(--surface-hover)] px-4 py-2.5 text-xs font-semibold text-[var(--sea-ink)] transition-colors shadow-2xs"
@@ -62,7 +62,7 @@ export default function Founder() {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/jobiss"
+                  href="https://linkedin.com/in/jobiss12"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-xl border border-indigo-200/60 dark:border-[var(--line)] bg-white/90 dark:bg-[var(--surface)] hover:bg-indigo-50/50 dark:hover:bg-[var(--surface-hover)] px-4 py-2.5 text-xs font-semibold text-[var(--sea-ink)] transition-colors shadow-2xs"

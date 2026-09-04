@@ -159,8 +159,8 @@ const SCHEMA_ORG_GRAPH = {
       ],
       sameAs: [
         'https://jobiss.jotech.in',
-        'https://github.com/jobiss',
-        'https://linkedin.com/in/jobiss',
+        'https://github.com/jobissjo',
+        'https://linkedin.com/in/jobiss12',
       ],
     },
     {

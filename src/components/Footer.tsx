@@ -130,7 +130,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/jobiss"
+                  href="https://github.com/jobissjo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[var(--sea-ink)] transition-colors inline-flex items-center gap-1 group"
@@ -143,7 +143,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/jobiss"
+                  href="https://linkedin.com/in/jobiss12"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[var(--sea-ink)] transition-colors inline-flex items-center gap-1 group"
