@@ -45,7 +45,9 @@ export default function Capabilities() {
       <div className="page-wrap">
         {/* Header */}
         <div className="max-w-2xl mb-12">
-          <p className="mono-meta text-indigo-400 mb-2">Engineering Scope</p>
+          <p className="mono-meta text-indigo-600 dark:text-indigo-400 mb-2 font-semibold">
+            Engineering Scope
+          </p>
           <h2 className="display-title text-3xl sm:text-5xl font-extrabold tracking-tight text-[var(--sea-ink)] mb-4">
             What I build
           </h2>
@@ -57,40 +59,59 @@ export default function Capabilities() {
 
         {/* 4 Compact Capability Cards */}
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {CAPABILITIES.map((cap) => (
-            <div
-              key={cap.title}
-              className="feature-card rounded-2xl p-6 flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="mono-meta text-indigo-400 font-semibold text-[0.75rem]">
-                    {cap.number}
-                  </span>
-                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-500/50" />
+          {CAPABILITIES.map((cap, idx) => {
+            const accents = [
+              {
+                text: 'text-indigo-600 dark:text-indigo-400',
+                dot: 'bg-indigo-500',
+              },
+              {
+                text: 'text-violet-600 dark:text-violet-400',
+                dot: 'bg-violet-500',
+              },
+              { text: 'text-sky-600 dark:text-sky-400', dot: 'bg-sky-500' },
+              { text: 'text-teal-600 dark:text-teal-400', dot: 'bg-teal-500' },
+            ][idx % 4]
+
+            return (
+              <div
+                key={cap.title}
+                className="feature-card rounded-2xl p-6 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span
+                      className={`mono-meta font-bold text-[0.75rem] ${accents.text}`}
+                    >
+                      {cap.number}
+                    </span>
+                    <span
+                      className={`h-2 w-2 rounded-full ${accents.dot} shadow-xs`}
+                    />
+                  </div>
+
+                  <h3 className="text-base font-bold text-[var(--sea-ink)] mb-2.5">
+                    {cap.title}
+                  </h3>
+
+                  <p className="text-xs text-[var(--sea-ink-soft)] leading-relaxed mb-4">
+                    {cap.desc}
+                  </p>
                 </div>
 
-                <h3 className="text-base font-bold text-[var(--sea-ink)] mb-2.5">
-                  {cap.title}
-                </h3>
-
-                <p className="text-xs text-[var(--sea-ink-soft)] leading-relaxed mb-4">
-                  {cap.desc}
-                </p>
+                <div className="pt-3 border-t border-[var(--line-subtle)] flex flex-wrap gap-1.5">
+                  {cap.techs.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-md border border-indigo-100/70 dark:border-[var(--line-subtle)] bg-indigo-50/50 dark:bg-[var(--chip-bg)] px-2 py-0.5 text-[0.62rem] font-mono text-slate-700 dark:text-[var(--sea-ink-muted)]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-
-              <div className="pt-3 border-t border-[var(--line-subtle)] flex flex-wrap gap-1.5">
-                {cap.techs.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded border border-[var(--line-subtle)] bg-[var(--chip-bg)] px-2 py-0.5 text-[0.62rem] font-mono text-[var(--sea-ink-muted)]"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

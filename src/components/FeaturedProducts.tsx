@@ -9,7 +9,7 @@ export default function FeaturedProducts() {
         {/* Section Header */}
         <div className="mb-12 flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div className="max-w-2xl">
-            <p className="mono-meta text-indigo-400 mb-2">
+            <p className="mono-meta text-indigo-600 dark:text-indigo-400 mb-2 font-semibold">
               Production Portfolio
             </p>
             <h2
@@ -24,9 +24,9 @@ export default function FeaturedProducts() {
             </p>
           </div>
 
-          <div className="flex items-center gap-2 self-start rounded-full border border-[var(--line)] bg-[var(--surface-glass)] px-3.5 py-1.5 text-xs font-mono text-[var(--sea-ink-soft)] md:self-end">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            <span>100% Active Production</span>
+          <div className="flex items-center gap-2 self-start rounded-full border border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-[var(--line)] dark:bg-[var(--surface-glass)] px-3.5 py-1.5 text-xs font-mono dark:text-[var(--sea-ink-soft)] md:self-end shadow-2xs">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-xs" />
+            <span className="font-semibold">100% Active Production</span>
           </div>
         </div>
 
@@ -39,9 +39,11 @@ export default function FeaturedProducts() {
             <div>
               {/* Card Meta Bar */}
               <div className="flex items-center justify-between gap-2 mb-4">
-                <span className="mono-meta text-indigo-400">PRODUCTIVITY</span>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--chip-bg)] px-2.5 py-0.5 text-[0.68rem] font-mono text-[var(--sea-ink)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span className="mono-meta text-indigo-600 dark:text-indigo-400 font-semibold">
+                  PRODUCTIVITY
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-[var(--line)] dark:bg-[var(--chip-bg)] dark:text-[var(--sea-ink)] px-2.5 py-0.5 text-[0.68rem] font-mono font-medium">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                   ACTIVE
                 </span>
               </div>
@@ -57,18 +59,18 @@ export default function FeaturedProducts() {
             </div>
 
             {/* Product Preview: Weekly Planning Matrix UI */}
-            <div className="product-mockup-wrapper rounded-xl border border-[var(--line)] bg-[var(--bg-base)] p-4 shadow-inner mb-6">
+            <div className="product-mockup-wrapper rounded-xl border border-indigo-100 dark:border-[var(--line)] bg-[var(--bg-base)] p-4 shadow-inner mb-6">
               {/* Mockup Header Bar */}
               <div className="flex items-center justify-between border-b border-[var(--line-subtle)] pb-2.5 mb-3.5 text-[0.68rem] font-mono text-[var(--sea-ink-muted)]">
                 <div className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-white/20" />
-                  <span className="h-2 w-2 rounded-full bg-white/20" />
-                  <span className="h-2 w-2 rounded-full bg-white/20" />
-                  <span className="ml-2 text-[var(--sea-ink-soft)]">
+                  <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                  <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                  <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                  <span className="ml-2 text-[var(--sea-ink-soft)] font-medium">
                     weekly-planner.jotech.in
                   </span>
                 </div>
-                <span className="text-indigo-400 font-semibold">
+                <span className="text-indigo-600 dark:text-indigo-400 font-semibold">
                   Week 36 · Focused
                 </span>
               </div>
@@ -106,27 +108,29 @@ export default function FeaturedProducts() {
               <div className="space-y-2">
                 <div className="flex items-center justify-between rounded-lg border border-[var(--line-subtle)] bg-[var(--surface)] px-3 py-2 text-xs">
                   <div className="flex items-center gap-2">
-                    <span className="h-3.5 w-3.5 rounded border border-indigo-400/80 bg-indigo-500/20 flex items-center justify-center text-[0.6rem] text-indigo-300">
+                    <span className="h-3.5 w-3.5 rounded border border-indigo-400/80 bg-indigo-500/20 flex items-center justify-center text-[0.6rem] text-indigo-600 dark:text-indigo-300 font-bold">
                       ✓
                     </span>
                     <span className="text-[var(--sea-ink)] font-medium">
                       Architecture spec & event schema
                     </span>
                   </div>
-                  <span className="mono-meta text-[0.6rem] text-indigo-400">
+                  <span className="mono-meta text-[0.6rem] text-indigo-600 dark:text-indigo-400 font-semibold">
                     High Priority
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between rounded-lg border border-[var(--line-subtle)] bg-[var(--surface)] px-3 py-2 text-xs">
                   <div className="flex items-center gap-2">
-                    <span className="h-3.5 w-3.5 rounded border border-[var(--line-strong)]" />
-                    <span className="text-[var(--sea-ink-soft)]">
-                      PostgreSQL query index benchmarking
+                    <span className="h-3.5 w-3.5 rounded border border-emerald-400/80 bg-emerald-500/20 flex items-center justify-center text-[0.6rem] text-emerald-600 dark:text-emerald-300 font-bold">
+                      ✓
+                    </span>
+                    <span className="text-[var(--sea-ink)] font-medium">
+                      Latency benchmark & stress test
                     </span>
                   </div>
-                  <span className="mono-meta text-[0.6rem] text-[var(--sea-ink-muted)]">
-                    Deep Work
+                  <span className="mono-meta text-[0.6rem] text-emerald-600 dark:text-emerald-400 font-semibold">
+                    Completed
                   </span>
                 </div>
               </div>
@@ -138,10 +142,12 @@ export default function FeaturedProducts() {
                 href="https://weekly-planner.jotech.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--sea-ink)] group-hover:text-indigo-400 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--sea-ink)] group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors"
               >
                 <span>Explore Weekly Planner</span>
-                <span className="cta-arrow text-indigo-400">→</span>
+                <span className="cta-arrow text-indigo-600 dark:text-indigo-400">
+                  →
+                </span>
               </a>
             </div>
           </article>
@@ -153,11 +159,11 @@ export default function FeaturedProducts() {
             <div>
               {/* Card Meta Bar */}
               <div className="flex items-center justify-between gap-2 mb-4">
-                <span className="mono-meta text-emerald-400">
+                <span className="mono-meta text-emerald-600 dark:text-emerald-400 font-semibold">
                   PERSONAL FINANCE
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--chip-bg)] px-2.5 py-0.5 text-[0.68rem] font-mono text-[var(--sea-ink)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-[var(--line)] dark:bg-[var(--chip-bg)] dark:text-[var(--sea-ink)] px-2.5 py-0.5 text-[0.68rem] font-mono font-medium">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                   ACTIVE
                 </span>
               </div>
@@ -173,18 +179,18 @@ export default function FeaturedProducts() {
             </div>
 
             {/* Product Preview: Financial Dashboard & Cashflow UI */}
-            <div className="product-mockup-wrapper rounded-xl border border-[var(--line)] bg-[var(--bg-base)] p-4 shadow-inner mb-6">
+            <div className="product-mockup-wrapper rounded-xl border border-emerald-100/80 dark:border-[var(--line)] bg-[var(--bg-base)] p-4 shadow-inner mb-6">
               {/* Mockup Header Bar */}
               <div className="flex items-center justify-between border-b border-[var(--line-subtle)] pb-2.5 mb-3.5 text-[0.68rem] font-mono text-[var(--sea-ink-muted)]">
                 <div className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-white/20" />
-                  <span className="h-2 w-2 rounded-full bg-white/20" />
-                  <span className="h-2 w-2 rounded-full bg-white/20" />
-                  <span className="ml-2 text-[var(--sea-ink-soft)]">
+                  <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                  <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                  <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                  <span className="ml-2 text-[var(--sea-ink-soft)] font-medium">
                     pocket-flow.jotech.in
                   </span>
                 </div>
-                <span className="text-emerald-400 font-semibold">
+                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
                   Net Cashflow
                 </span>
               </div>
@@ -198,7 +204,7 @@ export default function FeaturedProducts() {
                   <span className="font-mono text-base font-bold text-[var(--sea-ink)] mt-0.5 block">
                     $8,450.00
                   </span>
-                  <span className="text-[0.62rem] text-emerald-400 font-mono">
+                  <span className="text-[0.62rem] text-emerald-600 dark:text-emerald-400 font-mono font-semibold">
                     ↑ +14.2% MoM
                   </span>
                 </div>
@@ -220,7 +226,9 @@ export default function FeaturedProducts() {
               <div className="rounded-lg border border-[var(--line-subtle)] bg-[var(--surface)] p-2.5">
                 <div className="flex justify-between text-[0.62rem] font-mono text-[var(--sea-ink-soft)] mb-1.5">
                   <span>Categories</span>
-                  <span className="text-indigo-300">Disciplined Buffer</span>
+                  <span className="text-indigo-600 dark:text-indigo-300 font-medium">
+                    Disciplined Buffer
+                  </span>
                 </div>
                 <div className="flex h-2 w-full overflow-hidden rounded-full gap-0.5">
                   <div
@@ -249,10 +257,12 @@ export default function FeaturedProducts() {
                 href="https://pocket-flow.jotech.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--sea-ink)] group-hover:text-emerald-400 transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--sea-ink)] group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors"
               >
                 <span>Explore PocketFlow</span>
-                <span className="cta-arrow text-emerald-400">→</span>
+                <span className="cta-arrow text-emerald-600 dark:text-emerald-400">
+                  →
+                </span>
               </a>
             </div>
           </article>
@@ -266,9 +276,11 @@ export default function FeaturedProducts() {
             {/* Left Content */}
             <div className="lg:col-span-6">
               <div className="flex items-center justify-between gap-2 mb-4">
-                <span className="mono-meta text-indigo-400">ENGINEERING</span>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--chip-bg)] px-2.5 py-0.5 text-[0.68rem] font-mono text-[var(--sea-ink)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+                <span className="mono-meta text-indigo-600 dark:text-indigo-400 font-semibold">
+                  ENGINEERING
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-indigo-200 bg-indigo-50 text-indigo-700 dark:border-[var(--line)] dark:bg-[var(--chip-bg)] dark:text-[var(--sea-ink)] px-2.5 py-0.5 text-[0.68rem] font-mono font-medium">
+                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
                   CONTINUOUSLY DEVELOPED
                 </span>
               </div>
@@ -296,23 +308,25 @@ export default function FeaturedProducts() {
 
             {/* Right Editorial / Code Window Mockup */}
             <div className="lg:col-span-6">
-              <div className="product-mockup-wrapper rounded-xl border border-[var(--line)] bg-[var(--bg-base)] p-4 sm:p-5 shadow-inner">
+              <div className="product-mockup-wrapper rounded-xl border border-indigo-100 dark:border-[var(--line)] bg-[var(--bg-base)] p-4 sm:p-5 shadow-inner">
                 {/* Browser bar */}
                 <div className="flex items-center justify-between border-b border-[var(--line-subtle)] pb-2.5 mb-3 text-[0.68rem] font-mono text-[var(--sea-ink-muted)]">
                   <div className="flex items-center gap-1.5">
-                    <span className="h-2 w-2 rounded-full bg-white/20" />
-                    <span className="h-2 w-2 rounded-full bg-white/20" />
-                    <span className="h-2 w-2 rounded-full bg-white/20" />
-                    <span className="ml-2 text-[var(--sea-ink-soft)]">
+                    <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                    <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                    <span className="h-2 w-2 rounded-full bg-slate-300 dark:bg-white/20" />
+                    <span className="ml-2 text-[var(--sea-ink-soft)] font-medium">
                       blog.jotech.in/system-design
                     </span>
                   </div>
-                  <span className="text-indigo-400">Article Snapshot</span>
+                  <span className="text-indigo-600 dark:text-indigo-400 font-semibold">
+                    Article Snapshot
+                  </span>
                 </div>
 
                 {/* Article Header Card */}
                 <div className="rounded-lg border border-[var(--line-subtle)] bg-[var(--surface)] p-3.5 mb-3">
-                  <div className="flex items-center gap-2 mono-meta text-[0.6rem] text-indigo-400 mb-1">
+                  <div className="flex items-center gap-2 mono-meta text-[0.6rem] text-indigo-600 dark:text-indigo-400 font-semibold mb-1">
                     <span>SYSTEM ARCHITECTURE</span>
                     <span>·</span>
                     <span>5 MIN READ</span>
@@ -328,7 +342,7 @@ export default function FeaturedProducts() {
                 </div>
 
                 {/* Code Window */}
-                <div className="rounded-lg border border-[var(--line-subtle)] bg-[#050607] p-3 font-mono text-[0.7rem] text-slate-300">
+                <div className="rounded-lg border border-slate-800/80 bg-[#07090e] p-3 font-mono text-[0.7rem] text-slate-300 shadow-md">
                   <div className="text-slate-500 mb-1 text-[0.6rem] flex justify-between">
                     <span>pipeline.ts</span>
                     <span className="text-indigo-400">TypeScript</span>

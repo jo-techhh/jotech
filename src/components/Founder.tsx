@@ -6,21 +6,22 @@ export default function Founder() {
     >
       <div className="page-wrap">
         <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface-glass)] p-8 sm:p-12 lg:p-16 backdrop-blur-xl shadow-sm relative overflow-hidden">
-          {/* Subtle background ambient glow */}
-          <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.08),transparent_70%)]" />
+          {/* Subtle background ambient glows */}
+          <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.16),transparent_70%)]" />
+          <div className="pointer-events-none absolute -left-16 -bottom-16 h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(14,165,233,0.12),transparent_70%)]" />
 
           <div className="grid gap-10 lg:grid-cols-12 lg:items-center relative z-10">
             {/* Left: Founder Story (8 cols) */}
             <div className="lg:col-span-8">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--chip-bg)] px-3 py-1 text-xs font-mono text-indigo-400 mb-4">
-                <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200/80 dark:border-[var(--line)] bg-indigo-50/90 dark:bg-[var(--chip-bg)] px-3 py-1 text-xs font-mono text-indigo-800 dark:text-indigo-400 mb-4 shadow-2xs">
+                <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 dark:bg-indigo-400" />
                 FOUNDER-LED ENGINEERING
               </div>
 
               <h2 className="display-title text-3xl sm:text-5xl font-extrabold text-[var(--sea-ink)] mb-2">
                 Built by Jobi S S.
               </h2>
-              <p className="mono-meta text-indigo-300 text-xs sm:text-sm mb-6">
+              <p className="mono-meta text-indigo-600 dark:text-indigo-300 text-xs sm:text-sm mb-6 font-semibold">
                 Founder · Systems Engineer · Independent Builder
               </p>
 
@@ -54,7 +55,7 @@ export default function Founder() {
                   href="https://github.com/jobiss"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-[var(--line)] bg-[var(--surface)] hover:bg-[var(--surface-hover)] px-4 py-2.5 text-xs font-semibold text-[var(--sea-ink)] transition-colors"
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-indigo-200/60 dark:border-[var(--line)] bg-white/90 dark:bg-[var(--surface)] hover:bg-indigo-50/50 dark:hover:bg-[var(--surface-hover)] px-4 py-2.5 text-xs font-semibold text-[var(--sea-ink)] transition-colors shadow-2xs"
                 >
                   <span>GitHub</span>
                   <span className="text-[0.65rem] opacity-60">↗</span>
@@ -64,7 +65,7 @@ export default function Founder() {
                   href="https://linkedin.com/in/jobiss"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-[var(--line)] bg-[var(--surface)] hover:bg-[var(--surface-hover)] px-4 py-2.5 text-xs font-semibold text-[var(--sea-ink)] transition-colors"
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-indigo-200/60 dark:border-[var(--line)] bg-white/90 dark:bg-[var(--surface)] hover:bg-indigo-50/50 dark:hover:bg-[var(--surface-hover)] px-4 py-2.5 text-xs font-semibold text-[var(--sea-ink)] transition-colors shadow-2xs"
                 >
                   <span>LinkedIn</span>
                   <span className="text-[0.65rem] opacity-60">↗</span>
@@ -74,8 +75,8 @@ export default function Founder() {
 
             {/* Right: Minimalist Engineering Identity Badge / Emblem (4 cols) */}
             <div className="lg:col-span-4 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-xs rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-6 text-center shadow-lg">
-                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-950 to-[#08090a] shadow-inner">
+              <div className="relative w-full max-w-xs rounded-2xl border border-indigo-100 dark:border-[var(--line)] bg-white dark:bg-[var(--surface)] p-6 text-center shadow-lg shadow-indigo-500/5">
+                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl border border-indigo-400/40 bg-gradient-to-br from-indigo-600 to-violet-700 dark:from-indigo-950 dark:to-[#08090a] shadow-md shadow-indigo-500/20">
                   <span className="display-title font-extrabold text-2xl text-white tracking-tight">
                     JSS
                   </span>
@@ -84,7 +85,7 @@ export default function Founder() {
                 <h3 className="display-title text-base font-bold text-[var(--sea-ink)]">
                   Jobi S S
                 </h3>
-                <p className="mono-meta text-[0.68rem] text-indigo-400 mt-0.5">
+                <p className="mono-meta text-[0.68rem] text-indigo-600 dark:text-indigo-400 mt-0.5 font-semibold">
                   Full-Lifecycle Builder
                 </p>
 
@@ -109,7 +110,7 @@ export default function Founder() {
                     <span className="text-[var(--sea-ink-muted)]">
                       Ecosystem:
                     </span>
-                    <span className="font-mono text-indigo-400">
+                    <span className="font-mono text-indigo-600 dark:text-indigo-400 font-semibold">
                       JoTech (India / Global)
                     </span>
                   </div>

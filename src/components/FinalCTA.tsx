@@ -12,12 +12,13 @@ export default function FinalCTA() {
   return (
     <section className="py-16 sm:py-24 border-t border-[var(--line-subtle)]">
       <div className="page-wrap">
-        <div className="rounded-3xl border border-[var(--line)] bg-[var(--surface-glass)] p-8 sm:p-14 md:p-18 text-center relative overflow-hidden backdrop-blur-xl shadow-lg">
-          {/* Subtle Ambient Glow */}
-          <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-96 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.12),transparent_70%)] blur-2xl" />
+        <div className="rounded-3xl border border-indigo-100 dark:border-[var(--line)] bg-white/90 dark:bg-[var(--surface-glass)] p-8 sm:p-14 md:p-18 text-center relative overflow-hidden backdrop-blur-xl shadow-xl shadow-indigo-500/5">
+          {/* Subtle Ambient Glows */}
+          <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-80 w-[420px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.18),transparent_70%)] blur-2xl" />
+          <div className="pointer-events-none absolute right-10 bottom-4 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(14,165,233,0.12),transparent_70%)] blur-xl" />
 
           <div className="relative z-10 max-w-2xl mx-auto">
-            <span className="mono-meta text-indigo-400 mb-4 inline-block font-semibold">
+            <span className="mono-meta text-indigo-600 dark:text-indigo-400 mb-4 inline-block font-semibold">
               START A CONVERSATION
             </span>
 

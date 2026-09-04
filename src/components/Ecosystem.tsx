@@ -65,7 +65,7 @@ export default function Ecosystem() {
       <div className="page-wrap">
         {/* Section Heading */}
         <div className="max-w-2xl mb-12">
-          <p className="mono-meta text-indigo-400 mb-2">
+          <p className="mono-meta text-indigo-600 dark:text-indigo-400 mb-2 font-semibold">
             Independent Constellation
           </p>
           <h2 className="display-title text-3xl sm:text-5xl font-extrabold tracking-tight text-[var(--sea-ink)] mb-4">
@@ -83,25 +83,25 @@ export default function Ecosystem() {
         {/* Interactive Visualization Container */}
         <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface-glass)] p-6 sm:p-10 backdrop-blur-xl relative overflow-hidden shadow-sm">
           {/* Subtle background ambient mesh */}
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.06),transparent_70%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_70%)]" />
 
           <div className="grid gap-8 lg:grid-cols-12 lg:items-center relative z-10">
             {/* Constellation Nodes Interactive Area (7 cols) */}
             <div className="lg:col-span-7 flex flex-col items-center justify-center min-h-[340px] py-4">
               {/* Central Hub Node */}
               <div className="relative mb-8 sm:mb-12">
-                <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-2xl border border-indigo-500/40 bg-gradient-to-b from-indigo-950/80 to-[#101216] shadow-lg shadow-indigo-500/20">
+                <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-2xl border border-indigo-400/50 bg-gradient-to-br from-indigo-600 to-violet-700 dark:from-indigo-950/80 dark:to-[#101216] shadow-lg shadow-indigo-500/25">
                   <div className="text-center">
                     <span className="display-title block text-base font-extrabold text-white">
                       JO TECH
                     </span>
-                    <span className="mono-meta block text-[0.58rem] text-indigo-300">
+                    <span className="mono-meta block text-[0.58rem] text-indigo-200 dark:text-indigo-300">
                       NEXUS
                     </span>
                   </div>
                 </div>
                 {/* Subtle pulse ring around central hub */}
-                <div className="absolute -inset-2 rounded-2xl border border-indigo-500/20 animate-pulse pointer-events-none" />
+                <div className="absolute -inset-2 rounded-2xl border border-indigo-500/30 animate-pulse pointer-events-none" />
               </div>
 
               {/* Connected Satellites Grid */}
@@ -116,8 +116,8 @@ export default function Ecosystem() {
                       onMouseEnter={() => setActiveNode(node)}
                       className={`group relative flex flex-col items-center justify-center rounded-xl border p-3.5 text-center transition-all duration-200 cursor-pointer ${
                         isSelected
-                          ? 'border-indigo-500/80 bg-indigo-950/40 shadow-md shadow-indigo-500/15 -translate-y-1'
-                          : 'border-[var(--line)] bg-[var(--surface)] hover:border-[var(--line-strong)] hover:bg-[var(--surface-hover)]'
+                          ? 'border-indigo-500 bg-indigo-50/90 dark:bg-indigo-950/50 shadow-md shadow-indigo-500/15 -translate-y-1'
+                          : 'border-[var(--line)] bg-[var(--surface)] hover:border-indigo-300 dark:hover:border-[var(--line-strong)] hover:bg-[var(--surface-hover)]'
                       }`}
                       aria-label={`Inspect ${node.name}`}
                     >
@@ -131,7 +131,7 @@ export default function Ecosystem() {
                       </span>
 
                       <span
-                        className={`text-xs font-bold leading-snug ${isSelected ? 'text-white' : 'text-[var(--sea-ink)]'}`}
+                        className={`text-xs font-bold leading-snug ${isSelected ? 'text-indigo-950 dark:text-white' : 'text-[var(--sea-ink)]'}`}
                       >
                         {node.name}
                       </span>
@@ -162,7 +162,7 @@ export default function Ecosystem() {
               <h3 className="display-title text-2xl font-bold text-[var(--sea-ink)] mb-1">
                 {activeNode.name}
               </h3>
-              <p className="mono-meta text-indigo-400 mb-3 text-[0.72rem]">
+              <p className="mono-meta text-indigo-600 dark:text-indigo-400 mb-3 text-[0.72rem] font-semibold">
                 {activeNode.category}
               </p>
 

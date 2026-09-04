@@ -109,12 +109,12 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
         {/* Eyebrow badge */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface-strong)] px-3.5 py-1 text-xs font-mono text-[var(--sea-ink-soft)] mb-6 shadow-2xs">
+        <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200/80 dark:border-[var(--line)] bg-indigo-50/90 dark:bg-[var(--surface-strong)] px-3.5 py-1 text-xs font-mono text-indigo-900 dark:text-[var(--sea-ink-soft)] mb-6 shadow-2xs">
           <span className="status-beacon">
             <span className="status-beacon-ping" />
             <span className="status-beacon-dot" />
           </span>
-          <span className="tracking-widest uppercase text-[0.68rem] font-semibold text-[var(--sea-ink)]">
+          <span className="tracking-widest uppercase text-[0.68rem] font-semibold text-indigo-950 dark:text-[var(--sea-ink)]">
             INDEPENDENT SOFTWARE ECOSYSTEM
           </span>
         </div>
@@ -123,7 +123,7 @@ export default function Hero() {
         <h1 className="display-title text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-[var(--sea-ink)] leading-[1.08] mb-6">
           Software built independently.
           <br />
-          <span className="bg-gradient-to-r from-indigo-300 via-white to-slate-300 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-sky-600 dark:from-indigo-300 dark:via-white dark:to-slate-300 bg-clip-text text-transparent">
             Products built to be useful.
           </span>
         </h1>
@@ -135,7 +135,7 @@ export default function Hero() {
             href="https://jobiss.jotech.in/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--sea-ink)] font-semibold hover:text-indigo-400 underline decoration-[var(--line-strong)] underline-offset-4 transition-colors"
+            className="text-indigo-600 dark:text-[var(--sea-ink)] font-semibold hover:text-indigo-500 dark:hover:text-indigo-400 underline decoration-indigo-300 dark:decoration-[var(--line-strong)] underline-offset-4 transition-colors"
           >
             Jobi S S
           </a>{' '}
@@ -168,28 +168,28 @@ export default function Hero() {
         </div>
 
         {/* Technical Status Row */}
-        <div className="inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-xl border border-[var(--line-subtle)] bg-[var(--surface-glass)]/60 px-5 py-2.5 backdrop-blur-md text-[0.72rem] font-mono text-[var(--sea-ink-soft)]">
+        <div className="inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-xl border border-indigo-100/80 dark:border-[var(--line-subtle)] bg-white/80 dark:bg-[var(--surface-glass)]/60 px-5 py-2.5 backdrop-blur-md text-[0.72rem] font-mono text-[var(--sea-ink-soft)] shadow-xs">
           <div className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
-            <span className="tracking-wider uppercase font-semibold text-[var(--sea-ink)]">
+            <span className="h-2 w-2 rounded-full bg-indigo-500 shadow-xs shadow-indigo-500/40" />
+            <span className="tracking-wider uppercase font-semibold text-indigo-950 dark:text-[var(--sea-ink)]">
               3 PRODUCTS
             </span>
           </div>
-          <span className="hidden sm:inline text-[var(--sea-ink-muted)] opacity-40">
+          <span className="hidden sm:inline text-indigo-300/60 dark:text-[var(--sea-ink-muted)] opacity-60">
             |
           </span>
           <div className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            <span className="tracking-wider uppercase font-semibold text-[var(--sea-ink)]">
+            <span className="h-2 w-2 rounded-full bg-emerald-500 shadow-xs shadow-emerald-500/40" />
+            <span className="tracking-wider uppercase font-semibold text-emerald-950 dark:text-[var(--sea-ink)]">
               1 BUILDER
             </span>
           </div>
-          <span className="hidden sm:inline text-[var(--sea-ink-muted)] opacity-40">
+          <span className="hidden sm:inline text-indigo-300/60 dark:text-[var(--sea-ink-muted)] opacity-60">
             |
           </span>
           <div className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
-            <span className="tracking-wider uppercase font-semibold text-[var(--sea-ink)]">
+            <span className="h-2 w-2 rounded-full bg-violet-500 shadow-xs shadow-violet-500/40" />
+            <span className="tracking-wider uppercase font-semibold text-violet-950 dark:text-[var(--sea-ink)]">
               AI + SOFTWARE + SYSTEMS
             </span>
           </div>

@@ -61,7 +61,7 @@ export default function CurrentlyBuilding() {
               </p>
             </div>
 
-            <div className="mono-meta text-[0.68rem] text-[var(--sea-ink-muted)] self-start sm:self-auto bg-[var(--chip-bg)] border border-[var(--line)] rounded-lg px-3 py-1">
+            <div className="mono-meta text-[0.68rem] text-indigo-800 dark:text-[var(--sea-ink-muted)] self-start sm:self-auto bg-indigo-50/80 dark:bg-[var(--chip-bg)] border border-indigo-200/80 dark:border-[var(--line)] rounded-lg px-3 py-1 font-semibold shadow-2xs">
               LIVE TELEMETRY BOARD
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function CurrentlyBuilding() {
               return (
                 <div
                   key={item.name}
-                  className="rounded-xl border border-[var(--line-subtle)] bg-[var(--surface)] p-4 hover:border-[var(--line-strong)] transition-all duration-200"
+                  className="rounded-xl border border-[var(--line-subtle)] bg-[var(--surface)] p-4 hover:border-indigo-300 dark:hover:border-[var(--line-strong)] hover:shadow-xs transition-all duration-200"
                 >
                   <div className="flex items-center justify-between gap-2 mb-2">
                     <span className="mono-meta text-[0.62rem] text-[var(--sea-ink-muted)]">
@@ -82,13 +82,13 @@ export default function CurrentlyBuilding() {
                     <span
                       className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[0.62rem] font-mono font-semibold ${
                         isExploring
-                          ? 'border border-violet-500/30 bg-violet-500/10 text-violet-300'
-                          : 'border border-emerald-500/30 bg-emerald-500/10 text-emerald-300'
+                          ? 'border border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-500/30 dark:bg-violet-500/10 dark:text-violet-300'
+                          : 'border border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300'
                       }`}
                     >
                       <span
                         className={`h-1.5 w-1.5 rounded-full ${
-                          isExploring ? 'bg-violet-400' : 'bg-emerald-400'
+                          isExploring ? 'bg-violet-500' : 'bg-emerald-500'
                         }`}
                       />
                       {item.status}
@@ -105,7 +105,9 @@ export default function CurrentlyBuilding() {
 
                   <div className="pt-2 border-t border-[var(--line-subtle)] flex items-center justify-between mono-meta text-[0.6rem] text-[var(--sea-ink-muted)]">
                     <span>STATUS: {item.version}</span>
-                    <span className="text-indigo-400 font-mono">● LIVE</span>
+                    <span className="text-indigo-600 dark:text-indigo-400 font-mono font-semibold">
+                      ● LIVE
+                    </span>
                   </div>
                 </div>
               )
